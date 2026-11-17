@@ -32,8 +32,8 @@
                             </div>
                         @endif
                         <div class="form-group">
-                            <label class="col-form-label">Username</label>
-                            <input class="form-control" type="text" name="username" >
+                            <label class="col-form-label">Email</label>
+                            <input class="form-control" type="email" name="email" >
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Password</label>
