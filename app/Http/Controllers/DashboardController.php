@@ -15,6 +15,10 @@ class DashboardController extends Controller
     {
         return view('dashboard');
         
+        return view('dashboard',[
+            'nama' =>'Muhamad Aby Ramadhan',
+            'nis' =>123456789,
+        ]);
     }
 
     /**
