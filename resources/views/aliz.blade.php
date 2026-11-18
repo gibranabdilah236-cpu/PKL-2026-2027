@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aliz</title>
+    <title>Aliziyya Kautsara</title>
 </head>
 <body>
 
-    <h1>Aliz</h1>
-    <p>Selamat datang di halaman Aliz.</p>
+    <h1>Aliziyya Kautsara</h1>
+    <p>Selamat datang di halaman Aliziyya Kautsara.</p>
 
 </body>
 </html>

@@ -38,7 +38,7 @@
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
                             <i data-feather="user"></i>
-                            <span>Aliz</span>
+                            <span>Aliziyya Kautsara</span>
                         </a>
                     </li>
 
