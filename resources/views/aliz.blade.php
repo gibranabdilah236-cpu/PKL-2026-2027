@@ -8,7 +8,7 @@
 <body>
 
     <h1>Aliziyya Kautsara</h1>
-    <p>Selamat datang di halaman Aliziyya Kautsara.</p>
-
+    <p>Aliziyya Kautsara : nis 242510287</p>
+    <p>nisn : 0099688393</p>
 </body>
 </html>
