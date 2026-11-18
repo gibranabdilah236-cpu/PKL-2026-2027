@@ -11,15 +11,13 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('dashboard');
-        
-        return view('dashboard',[
-            'nama' =>'Muhamad Aby Ramadhan',
-            'nis' =>123456789,
-        ]);
-    }
+ public function index()
+{
+    return view('dashboard', [
+        'nama' => 'Muhamad Aby Ramadhan',
+        'nis'  => 123456789,
+    ]);
+}
 
     /**
      * Show the form for creating a new resource.
