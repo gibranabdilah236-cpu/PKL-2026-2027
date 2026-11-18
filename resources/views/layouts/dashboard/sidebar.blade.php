@@ -31,18 +31,19 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
-                            <i data-feather="activity"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('menu-aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
                             <i data-feather="users"></i>
                             <span>Menu Aby</span>
                         </a>
                     </li>
+
+                      <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('Gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+                            <i data-feather="users"></i>
+                            <span>Menu Gibran</span>
+                        </a>
+                    </li>
+
 
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
