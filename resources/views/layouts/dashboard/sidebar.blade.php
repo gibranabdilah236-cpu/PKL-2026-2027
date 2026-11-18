@@ -1,10 +1,11 @@
 
+<
 <div class="sidebar-wrapper">
     <div>
         <div class="logo-wrapper">
             <a href=""><img class="img-fluid for-light w-75" src="https://via.placeholder.com/305x60.png?text=Logo+RSUD+Kota+Bogor" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
-            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"></i></div>
         </div>
 
         <div class="logo-icon-wrapper">
@@ -33,6 +34,13 @@
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                             <i data-feather="activity"></i>
                             <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('menu-aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
+                            <i data-feather="users"></i>
+                            <span>Menu Aby</span>
                         </a>
                     </li>
 
