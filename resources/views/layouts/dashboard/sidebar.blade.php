@@ -53,6 +53,11 @@
 
                     <hr style="color: #bdbdbd">
 
+						 <a class="sidebar-link {{ request()->routeIs('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+							<i data-feather="home"> </i><span>Menu Aby</span>
+						</a>
+					</li>
+					<hr style="color: #bdbdbd">
                     <li class="sidebar-main-title" style="padding-top: 0; padding-bottom: 0;">
                         <div style="background-color: transparent">
                             <h6 class="mb-0">MASTER DATA</h6>
