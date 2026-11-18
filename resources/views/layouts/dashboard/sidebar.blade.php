@@ -29,21 +29,11 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
-                            <i data-feather="activity"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
-                            <i data-feather="user"></i>
-                            <span>Aliz</span>
-                        </a>
-                    </li>
-
-                    <hr style="color: #bdbdbd">
-
+						<a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
+							<i data-feather="activity"> </i><span>Dashboard</span>
+						</a>
+					</li>
+					<hr style="color: #bdbdbd">
                     <li class="sidebar-main-title" style="padding-top: 0; padding-bottom: 0;">
                         <div style="background-color: transparent">
                             <h6 class="mb-0">MASTER DATA</h6>

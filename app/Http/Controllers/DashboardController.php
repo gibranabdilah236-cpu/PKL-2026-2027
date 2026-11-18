@@ -13,7 +13,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        return view('dashboard',[
+            'nama' =>'Muhamad Aby Ramadhan',
+            'nis' =>123456789,
+        ]);
     }
 
     /**

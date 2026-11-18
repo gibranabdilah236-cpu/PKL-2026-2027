@@ -1,39 +1,34 @@
 @extends('layouts.dashboard.master')
 
-@section('title', 'Dashboard')
+@section('title', 'dashboard')
 
 @section('breadcrumb-title')
-<h3>Dashboard</h3>
+<h3>Menu Aby</h3>
 @endsection
 
 @section('breadcrumb-items')
-<li class="breadcrumb-item"><a href=""> Dashboard</i></a></li>
+<li class="breadcrumb-item active">dashboard</li>
 @endsection
 
 @section('content')
 <div class="container-fluid">
-	<div class="row">
-        <div class="card" data-aos="fade-up">
-            <div class="card-header">
-
-            </div>
-            <div class="card-body">
-
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h5>Nama</h5>
+                            <p class="mb-0">{{ $nama }}</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h5>NIS</h5>
+                            <p class="mb-0">{{ $nis }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-	</div>
+    </div>
 </div>
 @endsection
-
-@push('before-style')
-
-@endpush
-@push('after-style')
-
-@endpush
-@push('before-script')
-
-@endpush
-@push('after-script')
-
-@endpush

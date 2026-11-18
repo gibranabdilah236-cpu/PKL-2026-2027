@@ -12,9 +12,14 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/menu-aby', [DashboardController::class, 'index'])->name('menu.aby');
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+<<<<<<< HEAD
 });
 
 Route::get('/aliz', function () {
     return view('aliz');
+=======
+>>>>>>> 913444ef15cbbcd45a01ab8e905d649c24340230
 });
