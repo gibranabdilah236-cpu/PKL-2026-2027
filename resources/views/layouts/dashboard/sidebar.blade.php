@@ -27,10 +27,9 @@
                             <h6 class="mb-0">MASTER DATA</h6>
                         </div>
                     </li>
-
-                    <li class="sidebar-list">
-						<a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
-							<i data-feather="activity"> </i><span>Menu Aby</span>
+                    <hr style="color: #bdbdbd">
+						 <a class="sidebar-link {{ request()->routeIs('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+							<i data-feather="home"> </i><span>Menu Aby</span>
 						</a>
 					</li>
 					<hr style="color: #bdbdbd">
