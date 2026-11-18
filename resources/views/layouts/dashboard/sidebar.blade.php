@@ -31,13 +31,6 @@
                     </li>
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
-                            <i data-feather="activity"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('menu-aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
                             <i data-feather="users"></i>
                             <span>Menu Aby</span>

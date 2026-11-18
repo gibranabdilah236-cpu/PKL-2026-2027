@@ -22,12 +22,10 @@
                                   <img src="{{ asset('assets/images/foto/809240626842351867.jpg') }}"
                                    alt="Foto Aby"
                                    class="img-fluid rounded"
-                                   style="max-width: 250px;">
+                                   style="max-width: 100px;">
                               </div>
-                            <h5>Nama</h5>
+                            <h5>Nama</h5>   
                             <p class="mb-0">{{ $nama }}</p>
-                        </div>
-                        <div class="col-md-6 mb-3">
                             <h5>NIS</h5>
                             <p class="mb-0">{{ $nis }}</p>
                         </div>
