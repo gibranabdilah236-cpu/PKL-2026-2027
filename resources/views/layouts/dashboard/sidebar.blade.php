@@ -37,6 +37,14 @@
                         </a>
                     </li>
 
+                      <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('Gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+                            <i data-feather="users"></i>
+                            <span>Menu Gibran</span>
+                        </a>
+                    </li>
+
+
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->is('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
                             <i data-feather="user"></i>
