@@ -1,13 +1,13 @@
 @extends('layouts.dashboard.master')
 
-@section('title', 'Menu Gibran')
+@section('title', 'Menu Aby')
 
 @section('breadcrumb-title')
-<h3>Gibran</h3>
+<h3>Aby</h3>
 @endsection
 
 @section('breadcrumb-items')
-<li class="breadcrumb-item"><a href="">Gibran</a></li>
+<li class="breadcrumb-item"><a href="">Aby</a></li>
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
 	<div class="row">
         <div class="card" data-aos="fade-up">
             <div class="card-header">
-                <h4>Gibran Dwiki Abdilah - NIS 3271300097</h4>
+                <h4>Muhamad Aby Ramadhan - NIS 23456787657</h4>
             </div>
             <div class="card-body">
 

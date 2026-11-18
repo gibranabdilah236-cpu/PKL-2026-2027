@@ -21,7 +21,7 @@
                     <li class="sidebar-list">
 						 <a class="sidebar-link {{ request()->routeIs('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
 							<i data-feather="home"></i>
-							<span>Gibran</span>
+							<span>Aby</span>
 						</a>
 					</li>
 					<hr style="color: #bdbdbd">
