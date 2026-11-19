@@ -1,14 +1,15 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KasusPenyakit extends Model
+class DataPenyakit extends Model
 {
     use HasFactory;
 
-    protected $table = 'kasus_penyakits';
+    protected $table = 'data_penyakits';
 
     protected $fillable = [
         'kode_icd',

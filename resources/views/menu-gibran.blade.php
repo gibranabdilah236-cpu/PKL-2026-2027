@@ -29,7 +29,22 @@
                 </div>
                 
                 <div class="table-responsive mt-4">
-                    <table id="tabel-icd" class="table table-striped" style="width:100%">
+                    <style>
+                        .table-custom th {
+                            background-color: #34495e;
+                            color: white;
+                            padding: 12px;
+                            text-align: left;
+                            border: 1px solid #000000;
+                        }
+                        .table-custom td {
+                            padding: 10px 12px;
+                            border: 1px solid #000000;
+                            color: #000000;
+                        }
+                    </style>
+
+                    <table class="table-custom">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -43,8 +58,8 @@
                             <tr>
                                 <td>{{ $i + 1 }}</td>
                                 <td>{{ $row->kode_icd }}</td>
-                                <td>{{ $row->diagnosis_penyakit }}</td> <!-- Diperbarui dari diagnosis -->
-                                <td>{{ $row->jumlah_kasus }}</td>       <!-- Diperbarui dari jumlah_kunjungan -->
+                                <td>{{ $row->diagnosis_penyakit }}</td> 
+                                <td>{{ $row->jumlah_kasus }}</td>       
                             </tr>
                             @endforeach
                         </tbody>
@@ -55,12 +70,3 @@
 	</div>
 </div>
 @endsection
-
-@push('scripts')
-<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-<script>
-    $(function () {
-        $('#tabel-icd').DataTable();
-    });
-</script>
-@endpush

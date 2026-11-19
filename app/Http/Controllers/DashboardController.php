@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KasusPenyakit;
+use App\Models\DataPenyakit;
 
 class DashboardController extends Controller
 {
     public function index()
     {
         return view('dashboard', [
-            'data' => KasusPenyakit::orderBy('kode_icd')->get(),
+            'data' => DataPenyakit::orderBy('kode_icd')->get(),
         ]);
     }
 }

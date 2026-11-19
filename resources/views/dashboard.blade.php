@@ -10,10 +10,6 @@
 <li class="breadcrumb-item active">Dashboard</li>
 @endsection
 
-@push('after-style')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
-@endpush
-
 @section('content')
 <div class="container-fluid">
     <div class="card">

@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\DataPenyakitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,17 +27,11 @@ Route::middleware('auth')->group(function () {
     ]);
 })->name('menu.aby');
 
-   Route::get('/menu-gibran', function () {
-    return view('menu-gibran', [
-        'data' => \App\Models\KasusPenyakit::orderBy('kode_icd')->get(),
-    ]);
-})->name('menu.gibran');
-
     Route::get('/aliz', function () {
         return view('aliz');
     })->name('aliz');
 
-Route::get('/menu-gibran', [PenyakitController::class, 'index'])->name('menu.gibran');
+Route::get('/menu-gibran', [DataPenyakitController::class, 'index'])->name('menu.gibran');
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });
