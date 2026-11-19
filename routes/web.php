@@ -26,9 +26,11 @@ Route::middleware('auth')->group(function () {
     ]);
 })->name('menu.aby');
 
-    Route::get('/menu-gibran', function () {
-        return view('menu-gibran');
-    })->name('menu.gibran');
+   Route::get('/menu-gibran', function () {
+    return view('menu-gibran', [
+        'data' => \App\Models\KasusPenyakit::orderBy('kode_icd')->get(),
+    ]);
+})->name('menu.gibran');
 
     Route::get('/aliz', function () {
         return view('aliz');
