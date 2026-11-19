@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PenyakitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/aliz', function () {
         return view('aliz');
     })->name('aliz');
+
+Route::get('/menu-gibran', [PenyakitController::class, 'index'])->name('menu.gibran');
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });

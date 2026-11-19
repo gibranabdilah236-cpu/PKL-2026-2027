@@ -4,21 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKasusPenyakitsTable extends Migration
+return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('kasus_penyakits', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_icd', 10)->unique();
-            $table->string('diagnosis');
-            $table->unsignedInteger('jumlah_kunjungan')->default(0);
+            $table->string('kode_icd')->unique();
+            $table->string('diagnosis_penyakit');
+            $table->integer('jumlah_kasus')->default(0);
             $table->timestamps();
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('kasus_penyakits');
     }
-}
+};
