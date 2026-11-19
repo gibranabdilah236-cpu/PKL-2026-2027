@@ -27,7 +27,14 @@
                             <h6 class="mb-0">MASTER DATA</h6>
                         </div>
                     </li>
-                    
+
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
+                            <i data-feather="activity"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('menu.aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
                             <i data-feather="users"></i>
