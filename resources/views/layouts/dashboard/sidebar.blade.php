@@ -1,5 +1,3 @@
-
-<
 <div class="sidebar-wrapper">
     <div>
         <div class="logo-wrapper">
@@ -29,16 +27,16 @@
                             <h6 class="mb-0">MASTER DATA</h6>
                         </div>
                     </li>
-
+                    
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('menu-aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('menu.aby') ? 'active' : '' }}" href="{{ route('menu.aby') }}">
                             <i data-feather="users"></i>
                             <span>Menu Aby</span>
                         </a>
                     </li>
 
                       <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('Gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
                             <i data-feather="users"></i>
                             <span>Menu Gibran</span>
                         </a>
@@ -46,7 +44,7 @@
 
 
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('aliz') ? 'active' : '' }}" href="{{ url('/aliz') }}">
                             <i data-feather="user"></i>
                             <span>Aliziyya</span>
                         </a>
