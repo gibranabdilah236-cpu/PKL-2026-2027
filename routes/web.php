@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PenyakitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,9 +31,13 @@ Route::middleware('auth')->group(function () {
         return view('menu-gibran');
     })->name('menu.gibran');
 
+<<<<<<< HEAD
     Route::get('/aliz', function () {
         return view('aliz');
     })->name('aliz');
+=======
+    Route::get('/menu-gibran', [PenyakitController::class, 'index'])->name('menu.gibran');
+>>>>>>> 18d609a (Membuat tabel Daftar Penyakit)
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });

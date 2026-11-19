@@ -36,7 +36,11 @@
                     </li>
 
                       <li class="sidebar-list">
+<<<<<<< HEAD
                         <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+=======
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->is('menu.gibran') ? 'active' : '' }}" href="{{ route('menu.gibran') }}">
+>>>>>>> 18d609a (Membuat tabel Daftar Penyakit)
                             <i data-feather="users"></i>
                             <span>Menu Gibran</span>
                         </a>

@@ -3,7 +3,7 @@
 @section('title', 'Menu Gibran')
 
 @section('breadcrumb-title')
-<h3>Gibran</h3>
+<!-- <h3>Gibran</h3> -->
 @endsection
 
 @section('breadcrumb-items')
@@ -12,13 +12,15 @@
 
 @section('content')
 <div class="container-fluid">
-	<div class="row">
+    <!-- Bagian Kartu Profil Gibran (Tetap Utuh) -->
+	<div class="row mb-4">
         <div class="card" data-aos="fade-up">
             <div class="card-header">
                 <h4>Gibran Dwiki Abdilah - NIS 3271300097</h4>
             </div>
             <div class="card-body">
-                <div style="background: #aaa5a5; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; max-width: 320px; text-align: left; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                <div style="background: #aaa5a5; border: 1px solid #ffffff; border-radius: 45px; padding:  24px; 
+                            max-width: 320px; text-align: left; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
                     <center>
                         <img src="{{ asset('assets/images/foto/Gibran.jpg') }}" alt="Foto Gibran" style="width: 130px; height: 160px; border-radius: 8px; object-fit: cover; margin-bottom: 16px; border: 1px solid #e5e7eb;">
                         <h4 style="font-size: 16px; font-weight: bold; color: #000000; margin-bottom: 4px;">Gibran Dwiki Abdilah</h4>
@@ -26,9 +28,70 @@
                         <hr style="border: none; border-top: 1px solid #000000; margin: 12px 0;">
                         <p style="font-size: 13px; color: #000000; margin: 0;">Praktik Kerja Lapangan (PKL)<br>RSUD Kota Bogor</p>
                     </center>
-                    </div>
+                </div>
             </div>
         </div>
 	</div>
+
+    <div class="row">
+        <div class="card" data-aos="fade-up">
+            <div class="card-header">
+                <h4>Daftar Data Penyakit & Kunjungan</h4>
+            </div>
+            <div class="card-body">
+                <style>
+                    .table-polos {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+
+                    .table-polos th, .table-polos td {
+                        border: 1px solid #000000;
+                        padding: 10px;
+                        text-align: left;
+                    }
+
+                    .table-polos th {
+                        background-color: #c8c8c8;
+                    }
+
+                    .table-polos tbody tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+
+                    .table-polos tbody tr:nth-child(odd) {
+                        background-color: #ffffff;
+                    }
+
+                    .table-polos th:nth-child(3) {
+                        text-align: center;
+                    }
+                </style>
+
+                <table class="table-polos">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode ICD</th>
+                            <th>Diagnosis Penyakit</th>
+                            <th>Jumlah Kunjungan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($data as $index => $item)
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $item->kode_icd }}</td>
+                            <td>{{ $item->{'diagnosis penyakit'} }}</td>
+                            <td>{{ $item->jumlah_kunjungan }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
