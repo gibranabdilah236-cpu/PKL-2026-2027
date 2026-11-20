@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     return view('menu-aby', [
         'nama' => 'Muhamad Aby Ramadhan',
         'nis'  => '123456789',
-        'data' => \App\Models\KasusPenyakit::orderBy('kode_icd')->get(),
+         'diagnosa' => DB::table('kasus_penyakits')->get(),
     ]);
 })->name('menu.aby');
 

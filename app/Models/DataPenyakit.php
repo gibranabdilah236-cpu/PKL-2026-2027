@@ -11,9 +11,5 @@ class DataPenyakit extends Model
 
     protected $table = 'data_penyakits';
 
-    protected $fillable = [
-        'kode_icd',
-        'diagnosis_penyakit',
-        'jumlah_kasus',
-    ];
+    protected $fillable = ['kode_icd', 'nama_penyakit', 'jumlah'];
 }
