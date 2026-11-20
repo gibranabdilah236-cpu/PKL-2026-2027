@@ -3,7 +3,7 @@
 @section('title', 'Menu Gibran')
 
 @section('breadcrumb-title')
-<h3>Gibran.D. Abdilah</h3>
+<h3>Gibran D. Abdilah</h3>
 @endsection
 
 @section('breadcrumb-items')
