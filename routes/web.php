@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\DataPenyakitController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;  
 
 Route::middleware('guest')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'create'])->name('login');
@@ -18,7 +19,7 @@ Route::middleware('auth')->group(function () {
     return view('menu-aby', [
         'nama' => 'Muhamad Aby Ramadhan',
         'nis'  => '123456789',
-        'diagnosa' => DB::table('kasus_penyakits')->paginate(10),
+        'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
     ]);
 })->name('menu.aby');
 

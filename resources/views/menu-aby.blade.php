@@ -55,12 +55,29 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td colspan="4" class="text-center">Belum ada data</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                    @forelse($diagnosa as $row)
+                                        <tr>
+                                            <td>{{ $diagnosa->firstItem() + $loop->index }}</td>
+                                            <td>{{ $row->kode_icd }}</td>
+                                            <td>{{ $row->diagnosis }}</td>
+                                            <td>{{ $row->jumlah_kunjungan }}</td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="4" class="text-center">Belum ada data</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                           </table>
+                             <div class="d-flex justify-content-between align-items-center mt-3">
+                          <small class="text-muted">
+                            Menampilkan {{ $diagnosa->firstItem() }} - {{ $diagnosa->lastItem() }}
+                            dari {{ $diagnosa->total() }} data
+                             </small>
+                            <div>{{ $diagnosa->links() }}</div>
+                        </div>
+                     </div> 
+                  </div>
                 </div>
             </div>
         </div>
