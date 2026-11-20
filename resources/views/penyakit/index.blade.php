@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +10,7 @@
     <form action="{{ route('penyakit.index') }}" method="GET">
         <input type="text" name="search" placeholder="Cari penyakit..." value="{{ $search }}">
         <button type="submit">Cari</button>
+        <a href="{{ route('penyakit.index') }}">Reset</a>
     </form>
 
     <br>
@@ -39,7 +39,15 @@
 
     <br>
 
-    {{ $penyakit->links() }}
+    @if ($penyakit->previousPageUrl())
+        <a href="{{ $penyakit->previousPageUrl() }}">Sebelumnya</a>
+    @endif
+
+    Halaman {{ $penyakit->currentPage() }} dari {{ $penyakit->lastPage() }}
+
+    @if ($penyakit->nextPageUrl())
+        <a href="{{ $penyakit->nextPageUrl() }}">Selanjutnya</a>
+    @endif
 
 </body>
 </html>
