@@ -49,9 +49,8 @@
                             border: 1px solid #000000;
                             color: #000000;
                         }
-                    </style>                    
-
-                    <div class="table-responsive">
+                     </style>                    
+                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -62,19 +61,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($diagnosa as $i => $row)
+                               @foreach($diagnosa as $row)
                                     <tr>
-                                        <td>{{ $i + 1 }}</td>
+                                        <td>{{ $diagnosa->firstItem() + $loop->index }}</td>
                                         <td>{{ $row->kode_icd }}</td>
                                         <td>{{ $row->diagnosis }}</td>
                                         <td>{{ $row->jumlah_kunjungan }}</td>
                                     </tr>
                                 @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                              </tbody>
+                         </table>
+                             <div class="mt-3 d-flex justify-content-between align-items-center">
+                                    <small>
+                                        Menampilkan {{ $diagnosa->firstItem() }} - {{ $diagnosa->lastItem() }}
+                                        dari {{ $diagnosa->total() }} data
+                                    </small>
+                                 {{ $diagnosa->links() }}
+                         </div>
+                      </div>
+                 </div>
              </div>
-            </div>
         </div>
     </div>
 </div>

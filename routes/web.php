@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     return view('menu-aby', [
         'nama' => 'Muhamad Aby Ramadhan',
         'nis'  => '123456789',
-         'diagnosa' => DB::table('kasus_penyakits')->get(),
+        'diagnosa' => DB::table('kasus_penyakits')->paginate(10),
     ]);
 })->name('menu.aby');
 
