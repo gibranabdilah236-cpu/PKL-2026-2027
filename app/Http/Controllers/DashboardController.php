@@ -8,8 +8,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $penyakits = DataPenyakit::orderBy('kode_icd', 'asc')->get();
+
         return view('dashboard', [
-            'data' => DataPenyakit::orderBy('kode_icd')->paginate(10),
+            'data' => $penyakits,
         ]);
     }
 }

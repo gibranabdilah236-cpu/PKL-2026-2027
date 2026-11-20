@@ -76,7 +76,7 @@
                              </small>
                             <div>{{ $diagnosa->links() }}</div>
                         </div>
-                     </div> 
+                      </div> 
                   </div>
                 </div>
             </div>
