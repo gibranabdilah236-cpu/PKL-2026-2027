@@ -15,13 +15,13 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/menu-aby', function () {
-        return view('menu-aby', [
-            'nama' => 'Muhamad Aby Ramadhan',
-            'nis' => '123456789',
-            'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
-        ]);
-    })->name('menu.aby');
+ Route::get('/menu-aby', function () {
+    return view('menu-aby', [
+        'nama' => 'Muhamad Aby Ramadhan',
+        'nis' => '123456789',
+        'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
+    ]);
+})->name('menu.aby');
 
     Route::get('/aliz', [PenyakitController::class, 'index'])->name('aliz');
 
