@@ -18,25 +18,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-             <div class="card">
-                 <div class="card-body" >
-                     <div class="row">
-                         <div class="col-md-6 mb-3">
-                             <div class="card-body">
-                                 <img src="{{ asset('assets/images/foto/809240626842351867.jpg') }}"
-                                                          alt="Foto Aby"
-                                                          class="img-fluid rounded"
-                                                          style="max-width: 100px;">
-                                                 </div>
-                                                 <h5>Nama</h5>
-                                                 <p class="mb-0">{{ $nama }}</p>
-                                                 <h5>NIS</h5>
-                                                 <p class="mb-0">{{ $nis }}</p>
-                                             </div>
-                                         </div>
-                                     </div>
-                                     <style>
-                                        <style>
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <img src="{{ asset('assets/images/foto/809240626842351867.jpg') }}"
+                             alt="Foto Aby" class="img-fluid rounded" style="max-width: 100px;">
+                        <h5 class="mt-2">Nama</h5>
+                        <p class="mb-0">{{ $nama }}</p>
+                        <h5>NIS</h5>
+                        <p class="mb-0">{{ $nis }}</p>
+                    </div>
+
+                    <style>
                         .table-responsive th {
                             background-color: #34495e;
                             color: white;
@@ -49,8 +42,9 @@
                             border: 1px solid #000000;
                             color: #000000;
                         }
-                     </style>                    
-                     <div class="table-responsive">
+                    </style>
+
+                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -61,26 +55,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               @foreach($diagnosa as $row)
-                                    <tr>
-                                        <td>{{ $diagnosa->firstItem() + $loop->index }}</td>
-                                        <td>{{ $row->kode_icd }}</td>
-                                        <td>{{ $row->diagnosis }}</td>
-                                        <td>{{ $row->jumlah_kunjungan }}</td>
-                                    </tr>
-                                @endforeach
-                              </tbody>
-                         </table>
-                             <div class="mt-3 d-flex justify-content-between align-items-center">
-                                    <small>
-                                        Menampilkan {{ $diagnosa->firstItem() }} - {{ $diagnosa->lastItem() }}
-                                        dari {{ $diagnosa->total() }} data
-                                    </small>
-                                 {{ $diagnosa->links() }}
-                         </div>
-                      </div>
-                 </div>
-             </div>
+                                <tr>
+                                    <td colspan="4" class="text-center">Belum ada data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
