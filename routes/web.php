@@ -6,6 +6,7 @@ use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\DataPenyakitController;
 use App\Http\Controllers\MenuAbyController;
 use App\Http\Controllers\TandaTanganController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -22,15 +23,12 @@ Route::middleware('auth')->group(function () {
     ]);
 })->name('menu.gibran');
 
-    Route::get('/menu-aby', function () {
-        return view('menu-aby', [
-            'nama' => 'Muhamad Aby Ramadhan',
-            'nis' => '123456789',
-            'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
-        ]);
-    })->name('menu.aby');
+    Route::get('/menu-aby', [MenuAbyController::class, 'index'])->name('menu.aby');
+    Route::get('/menu-aby/pdf', [MenuAbyController::class, 'pdf'])->name('menu.aby.pdf');
 
     Route::post('/ttd-store', [TandaTanganController::class, 'store'])->name('ttd.store');
+    Route::get('/tanda-tangan/{nis}/{jenis}/gambar', [TandaTanganController::class, 'gambar'])->name('ttd.gambar');
+    Route::delete('/tanda-tangan/{nis}/{jenis}', [TandaTanganController::class, 'destroy'])->name('ttd.destroy');
 
     Route::get('/aliz', [PenyakitController::class, 'index'])->name('aliz');
 

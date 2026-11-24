@@ -90,7 +90,7 @@
                                     <th>Jumlah Kunjungan</th>
                                 </tr>
                             </thead>
-                           <tbody>
+                            <tbody>
                                 @foreach($diagnosa as $i => $row)
                                     <tr>
                                         <td>{{ $diagnosa->firstItem() + $i }}</td>
@@ -100,16 +100,75 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                           </table>
-                             <div class="d-flex justify-content-between align-items-center mt-3">
-                          <small class="text-muted">
-                            Menampilkan {{ $diagnosa->firstItem() }} - {{ $diagnosa->lastItem() }}
-                            dari {{ $diagnosa->total() }} data
-                             </small>
+                        </table>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                Menampilkan {{ $diagnosa->firstItem() }} - {{ $diagnosa->lastItem() }}
+                                dari {{ $diagnosa->total() }} data
+                            </small>
                             <div>{{ $diagnosa->links() }}</div>
                         </div>
-                      </div> 
-                  </div>
+                    </div>
+
+                    {{-- Verifikasi & Serah Terima --}}
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                        <h5 class="mb-0">Verifikasi &amp; Serah Terima</h5>
+                        <div>
+                            <a href="{{ route('menu.aby.pdf') }}" target="_blank" class="btn btn-success btn-sm">Cetak PDF</a>
+                            <a href="{{ route('menu.aby.pdf', ['unduh' => 1]) }}" class="btn btn-outline-success btn-sm">Unduh PDF</a>
+                        </div>
+                    </div>
+
+                    @php
+                        // Ubah judul / nama isian di sini. type: date = tanggal, time = jam
+                        $kolomTtd = [
+                            'pertama' => ['judul' => 'Protokol Diterima Farmasi', 'isian' => 'Tanggal', 'type' => 'date'],
+                            'kedua'   => ['judul' => 'Diterima Perawat',          'isian' => 'Jam',     'type' => 'time'],
+                        ];
+                    @endphp
+
+                    <div class="row">
+                        @foreach($kolomTtd as $jenis => $kolom)
+                            @php $ttd = $tandaTangan[$jenis] ?? null; @endphp
+                            <div class="col-md-6">
+                                <fieldset class="ttd-card">
+                                    <legend>{{ $kolom['judul'] }}</legend>
+
+                                    <div class="mb-3">
+                                        <label for="waktu-{{ $jenis }}">{{ $kolom['isian'] }}</label>
+                                        <input type="{{ $kolom['type'] }}" id="waktu-{{ $jenis }}"
+                                               class="form-control waktu-input" data-jenis="{{ $jenis }}"
+                                               value="{{ $ttd->waktu ?? '' }}">
+                                    </div>
+
+                                    <label>Paraf</label>
+                                    <canvas class="ttd-canvas" data-jenis="{{ $jenis }}"></canvas>
+
+                                    <div class="mt-2">
+                                        <button type="button" class="btn btn-secondary btn-sm btn-bersihkan" data-jenis="{{ $jenis }}">Hapus</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-simpan" data-jenis="{{ $jenis }}">
+                                            {{ $ttd ? 'Ganti' : 'Simpan' }}
+                                        </button>
+                                        @if($ttd)
+                                            <button type="button" class="btn btn-danger btn-sm btn-hapus" data-jenis="{{ $jenis }}">Hapus Tersimpan</button>
+                                        @endif
+                                    </div>
+
+                                    @if($ttd)
+                                        <div class="mt-3">
+                                            <small class="text-muted">Paraf tersimpan:</small><br>
+                                            <img src="{{ route('ttd.gambar', [$nis, $jenis]) }}?v={{ optional($ttd->updated_at)->timestamp }}"
+                                                 alt="Paraf {{ $kolom['judul'] }}"
+                                                 style="max-width: 200px; border: 1px solid #000; border-radius: 8px; background: #fff;">
+                                        </div>
+                                    @endif
+                                </fieldset>
+                            </div>
+                        @endforeach
+                    </div>
+
                 </div>
             </div>
         </div>

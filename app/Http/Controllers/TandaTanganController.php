@@ -73,6 +73,26 @@ class TandaTanganController extends Controller
         return response()->json(['message' => 'Tersimpan']);
     }
 
+    // Menampilkan gambar paraf langsung dari storage (tidak perlu `storage:link`)
+    public function gambar($nis, $jenis)
+    {
+        if (!array_key_exists($jenis, self::FORMAT_WAKTU)) {
+            abort(404);
+        }
+
+        $ttd  = TandaTangan::where('nis', $nis)->where('jenis', $jenis)->firstOrFail();
+        $disk = Storage::disk('public');
+
+        if (!$disk->exists($ttd->path)) {
+            abort(404);
+        }
+
+        return response()->file($disk->path($ttd->path), [
+            'Content-Type'  => 'image/png',
+            'Cache-Control' => 'private, max-age=0, must-revalidate',
+        ]);
+    }
+
     public function destroy($nis, $jenis)
     {
         if (!array_key_exists($jenis, self::FORMAT_WAKTU)) {
