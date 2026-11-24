@@ -15,14 +15,22 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
- Route::get('/menu-aby', function () {
-    return view('menu-aby', [
-        'nama' => 'Muhamad Aby Ramadhan',
-        'nis' => '123456789',
-        'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
+    
+  Route::get('/menu-gibran', function () {
+    return view('menu-gibran', [
+        'data' => DB::table('data_penyakits')->orderBy('kode_icd')->paginate(10),
     ]);
-})->name('menu.aby');
+})->name('menu.gibran');
+
+    Route::get('/menu-aby', function () {
+        return view('menu-aby', [
+            'nama' => 'Muhamad Aby Ramadhan',
+            'nis' => '123456789',
+            'diagnosa' => DB::table('kasus_penyakits')->orderBy('kode_icd')->paginate(10),
+        ]);
+    })->name('menu.aby');
+
+    Route::post('/ttd-store', [TandaTanganController::class, 'store'])->name('ttd.store');
 
     Route::get('/aliz', [PenyakitController::class, 'index'])->name('aliz');
 
