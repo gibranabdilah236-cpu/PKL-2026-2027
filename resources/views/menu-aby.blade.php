@@ -12,6 +12,52 @@
 
 @push('after-style')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+<style>
+    .table-responsive th {
+        background-color: #00bfe0;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #000000;
+    }
+    .table-responsive td {
+        padding: 10px 12px;
+        border: 1px solid #000000;
+        color: #000000;
+    }
+    .ttd-card {
+        border: 1px solid rgba(128, 128, 128, .4);
+        border-radius: 12px;
+        padding: 12px 20px 20px;
+        margin: 0 0 24px;
+        min-width: 0;
+    }
+    .ttd-card legend {
+        float: none;
+        width: auto;
+        padding: 0 8px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .ttd-card label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .ttd-card .waktu-input {
+        max-width: 220px;
+    }
+    .ttd-canvas {
+        width: 100%;
+        height: 150px;
+        border: 2px dashed #999;
+        border-radius: 8px;
+        background: #fff;
+        touch-action: none;
+        display: block;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -20,30 +66,20 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <div class="mb-3">
-                        <img src="{{ asset('assets/images/foto/809240626842351867.jpg') }}"
-                             alt="Foto Aby" class="img-fluid rounded" style="max-width: 100px;">
+
+                    {{-- Kartu identitas --}}
+                    <div class="mb-3" style="background: #b2d8ff; border: 1px solid #000000; border-radius: 12px; padding: 24px; max-width: 320px; text-align: left; box-shadow: 0 4px 6px -1px rgba(165, 142, 142, 0.05);">
+                        <center>
+                            <img src="{{ asset('assets/images/foto/809240626842351867.jpg') }}"
+                                 alt="Foto Aby" class="img-fluid rounded" style="max-width: 100px;">
+                        </center>
                         <h5 class="mt-2">Nama</h5>
                         <p class="mb-0">{{ $nama }}</p>
                         <h5>NIS</h5>
                         <p class="mb-0">{{ $nis }}</p>
                     </div>
 
-                    <style>
-                        .table-responsive th {
-                            background-color: #34495e;
-                            color: white;
-                            padding: 12px;
-                            text-align: left;
-                            border: 1px solid #000000;
-                        }
-                        .table-responsive td {
-                            padding: 10px 12px;
-                            border: 1px solid #000000;
-                            color: #000000;
-                        }
-                    </style>
-
+                    {{-- Tabel diagnosa --}}
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -54,20 +90,16 @@
                                     <th>Jumlah Kunjungan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                    @forelse($diagnosa as $row)
-                                        <tr>
-                                            <td>{{ $diagnosa->firstItem() + $loop->index }}</td>
-                                            <td>{{ $row->kode_icd }}</td>
-                                            <td>{{ $row->diagnosis }}</td>
-                                            <td>{{ $row->jumlah_kunjungan }}</td>
-                                        </tr>
-                                    @empty
-                                        <tr>
-                                            <td colspan="4" class="text-center">Belum ada data</td>
-                                        </tr>
-                                    @endforelse
-                                </tbody>
+                           <tbody>
+                                @foreach($diagnosa as $i => $row)
+                                    <tr>
+                                        <td>{{ $diagnosa->firstItem() + $i }}</td>
+                                        <td>{{ $row->kode_icd }}</td>
+                                        <td>{{ $row->diagnosis }}</td>
+                                        <td>{{ $row->jumlah_kunjungan }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
                            </table>
                              <div class="d-flex justify-content-between align-items-center mt-3">
                           <small class="text-muted">
@@ -76,7 +108,7 @@
                              </small>
                             <div>{{ $diagnosa->links() }}</div>
                         </div>
-                     </div> 
+                      </div> 
                   </div>
                 </div>
             </div>
@@ -84,3 +116,88 @@
     </div>
 </div>
 @endsection
+
+@push('after-script')
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+<script>
+    const csrf = document.querySelector('meta[name="csrf-token"]').content;
+    const NAMA = @json($nama);
+    const NIS  = @json($nis);
+    const pads = {};
+
+    // Satu SignaturePad untuk tiap kanvas
+    document.querySelectorAll('.ttd-canvas').forEach(canvas => {
+        const jenis = canvas.dataset.jenis;
+        pads[jenis] = new SignaturePad(canvas, { penColor: '#000000' });
+
+        function resizeCanvas() {
+            const ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext('2d').scale(ratio, ratio);
+            pads[jenis].clear();
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+    });
+
+    document.querySelectorAll('.btn-bersihkan').forEach(btn => {
+        btn.onclick = () => pads[btn.dataset.jenis].clear();
+    });
+
+    document.querySelectorAll('.btn-simpan').forEach(btn => {
+        btn.onclick = async () => {
+            const jenis = btn.dataset.jenis;
+            if (pads[jenis].isEmpty()) return alert('Paraf masih kosong');
+
+            try {
+                const res = await fetch("{{ route('ttd.store') }}", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': csrf
+                    },
+                    body: JSON.stringify({
+                        nama: NAMA,
+                        nis: NIS,
+                        jenis: jenis,
+                        waktu: document.getElementById('waktu-' + jenis).value || null,
+                        tanda_tangan: pads[jenis].toDataURL('image/png')
+                    })
+                });
+
+                const hasil = await res.json();
+                alert(hasil.message || 'Terjadi kesalahan');
+                if (res.ok) location.reload();
+            } catch (e) {
+                alert('Gagal menyimpan, coba lagi.');
+            }
+        };
+    });
+
+    document.querySelectorAll('.btn-hapus').forEach(btn => {
+        btn.onclick = async () => {
+            if (!confirm('Hapus paraf yang tersimpan?')) return;
+
+            const url = "{{ url('/tanda-tangan') }}/" + encodeURIComponent(NIS) + "/" + btn.dataset.jenis;
+
+            try {
+                const res = await fetch(url, {
+                    method: 'DELETE',
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': csrf
+                    }
+                });
+
+                const hasil = await res.json();
+                alert(hasil.message || 'Terjadi kesalahan');
+                if (res.ok) location.reload();
+            } catch (e) {
+                alert('Gagal menghapus, coba lagi.');
+            }
+        };
+    });
+</script>
+@endpush
