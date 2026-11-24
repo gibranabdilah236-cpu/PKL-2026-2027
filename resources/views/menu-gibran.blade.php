@@ -17,10 +17,10 @@
             <div class="card-body">
                 <div style="background: #46698b; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; max-width: 320px; text-align: left; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
                     <center>
-                        <img src="{{ asset('assets/images/foto/Gibran.jpg') }}" alt="Foto Gibran" style="width: 130px; height: 160px; border-radius: 8px; object-fit: cover; margin-bottom: 16px; border: 1px solid #e5e7eb;">
-                        <h4 style="font-size: 16px; font-weight: bold; color: #000000; margin-bottom: 4px;">Gibran Dwiki Abdilah</h4>
+                        <img src="{{ asset('/assets/images/foto/Gibran.jpg') }}" alt="Foto Gibran" style="width: 130px; height: 160px; border-radius: 8px; object-fit: cover; margin-bottom: 16px; border: 1px solid #e5e7eb;">
+                        <h4 style="font-size: 16px; font-weight: bold; color: #000000; margin-bottom: 4px;">Gibran D. Abdilah</h4>
                         <p style="font-size: 14px; color: #000000; margin-bottom: 12px;">NIS: 3271300097</p>
-                        <hr style="border: none; border-top: 1px solid #000000; margin: 12px 0;">
+                        <hr style="border: none; border-top: 2px solid #000000; opacity: 1; margin: 12px 0;">
                         <p style="font-size: 13px; color: #000000; margin: 0;">Praktik Kerja Lapangan (PKL)<br>RSUD Kota Bogor</p>
                     </center>
                 </div>
@@ -62,6 +62,68 @@
                         </tbody>
                     </table>
                 </div>
+
+            <div id="areaTTD" class="mt-4">
+                <style>
+                    .kotak-ttd {
+                    border: 1px solid #999999;
+                    border-radius: 10px;
+                    padding: 16px;
+                    width: 390px;
+                }
+
+                    .kotak-ttd legend {
+                    font-size: 14px;
+                    font-weight: bold;
+                    width: auto;
+                    padding: 0 8px;
+                    margin-bottom: 0;
+                }
+
+                    .kotak-ttd label {
+                    display: block;
+                    font-size: 13px;
+                    font-weight: bold;
+                    margin: 10px 0 4px 0;
+                }
+
+                    .kotak-ttd input {
+                    border: 1px solid #999999;
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                }
+
+                    .kotak-ttd canvas {
+                    border: 1px dashed #666666;
+                    border-radius: 6px;
+                    background: #ffffff;
+                    display: block;
+                }
+                </style>
+
+    <h5>Verifikasi &amp; Serah Terima</h5>
+
+                    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                        <fieldset class="kotak-ttd">
+                        <legend>Orang Pertama</legend>
+                        <label>Tanggal</label>
+                        <input type="date" id="tanggal1">
+                        <label>Paraf</label>
+                        <canvas id="ttd1" width="350" height="150"></canvas>
+                       <button type="button" class="mt-2" onclick="hapusTTD('ttd1')">Hapus</button>
+                    </fieldset>
+
+                    <fieldset class="kotak-ttd">
+                        <legend>Orang Kedua</legend>
+                        <label>Jam</label>
+                        <input type="time" id="jam2">
+                        <label>Paraf</label>
+                        <canvas id="ttd2" width="350" height="150"></canvas>
+                        <button type="button" class="mt-2" onclick="hapusTTD('ttd2')">Hapus</button>
+                    </fieldset>
+                </div>
+                   <button type="button" class="btn btn-primary mt-3" onclick="unduhPDF()">Unduh PDF</button>
+                </div>
             </div>
         </div>
     </div>
@@ -74,6 +136,8 @@
 
 @push('after-script')
 <script src="{{ asset('assets/vendors/datatable/datatables.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="{{ asset('assets/js/ttd-gibran.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('#tabelPenyakit').DataTable({
