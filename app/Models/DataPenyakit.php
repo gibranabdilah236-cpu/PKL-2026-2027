@@ -10,6 +10,5 @@ class DataPenyakit extends Model
     use HasFactory;
 
     protected $table = 'data_penyakits';
-
-    protected $fillable = ['kode_icd', 'nama_penyakit', 'jumlah'];
+    protected $fillable = ['kode_icd', 'diagnosis', 'jumlah_kunjungan'];
 }
