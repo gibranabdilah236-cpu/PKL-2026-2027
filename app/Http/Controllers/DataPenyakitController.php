@@ -8,11 +8,10 @@ use App\Models\DataPenyakit;
 class DataPenyakitController extends Controller
 {
     public function index()
-    {
-        $penyakits = DataPenyakit::orderBy('kode_icd', 'asc')->get();
+{
+    $data = DataPenyakit::orderBy('kode_icd', 'asc')->get();
+    $semuaDataPenyakitPdf = $data;
 
-        return view('menu-gibran', [
-            'data' => $penyakits,
-        ]);
-    }
+    return view('menu-gibran', compact('data', 'semuaDataPenyakitPdf'));
+}
 }

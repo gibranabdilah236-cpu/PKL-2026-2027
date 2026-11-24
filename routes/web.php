@@ -6,7 +6,6 @@ use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\DataPenyakitController;
 use App\Http\Controllers\MenuAbyController;
 use App\Http\Controllers\TandaTanganController;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -16,12 +15,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
-  Route::get('/menu-gibran', function () {
-    return view('menu-gibran', [
-        'data' => DB::table('data_penyakits')->orderBy('kode_icd')->paginate(10),
-    ]);
-})->name('menu.gibran');
+    Route::get('/menu-gibran', [DataPenyakitController::class, 'index'])->name('menu.gibran');
 
     Route::get('/menu-aby', [MenuAbyController::class, 'index'])->name('menu.aby');
     Route::get('/menu-aby/pdf', [MenuAbyController::class, 'pdf'])->name('menu.aby.pdf');
