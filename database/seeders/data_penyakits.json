@@ -1,0 +1,2377 @@
+[
+    {
+        "kode_icd": "H52.1",
+        "diagnosis": "Myopia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H52.2",
+        "diagnosis": "Astigmatism",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "H52.4",
+        "diagnosis": "Presbyopia",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "H52.7",
+        "diagnosis": "Disorder of refraction, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "H53.1",
+        "diagnosis": "Subjective visual disturbances",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "H53.2",
+        "diagnosis": "Diplopia",
+        "jumlah_kunjungan": 21
+    },
+    {
+        "kode_icd": "H54.2",
+        "diagnosis": "Low vision, both eyes",
+        "jumlah_kunjungan": 30
+    },
+    {
+        "kode_icd": "H60.0",
+        "diagnosis": "Abscess of external ear",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "H60.4",
+        "diagnosis": "Cholesteatoma of external ear",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "H60.9",
+        "diagnosis": "Otitis externa, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "H61.2",
+        "diagnosis": "Impacted cerumen",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "H62.2",
+        "diagnosis": "Otitis externa in mycoses",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "H65.2",
+        "diagnosis": "Chronic serous otitis media",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H65.9",
+        "diagnosis": "Nonsuppurative otitis media, unspecified",
+        "jumlah_kunjungan": 116
+    },
+    {
+        "kode_icd": "H66.0",
+        "diagnosis": "Acute suppurative otitis media",
+        "jumlah_kunjungan": 128
+    },
+    {
+        "kode_icd": "H68.1",
+        "diagnosis": "Obstruction of Eustachian tube",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H69.9",
+        "diagnosis": "Eustachian tube disorder, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H70.0",
+        "diagnosis": "Acute mastoiditis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "H70.1",
+        "diagnosis": "Chronic mastoiditis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H71",
+        "diagnosis": "Cholesteatoma of middle ear",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "H72.8",
+        "diagnosis": "Other perforations of tympanic membrane",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H72.9",
+        "diagnosis": "Perforation of tympanic membrane, unspecified",
+        "jumlah_kunjungan": 55
+    },
+    {
+        "kode_icd": "H74.4",
+        "diagnosis": "Polyp of middle ear",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H74.8",
+        "diagnosis": "Other specified disorders of middle ear and mastoid",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H81.0",
+        "diagnosis": "Meniere's disease",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H81.1",
+        "diagnosis": "Benign paroxysmal vertigo",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "H81.3",
+        "diagnosis": "Other peripheral vertigo",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "H81.4",
+        "diagnosis": "Vertigo of central origin",
+        "jumlah_kunjungan": 20
+    },
+    {
+        "kode_icd": "H81.9",
+        "diagnosis": "Disorder of vestibular function, unspecified",
+        "jumlah_kunjungan": 33
+    },
+    {
+        "kode_icd": "H90.0",
+        "diagnosis": "Conductive hearing loss, bilateral",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H90.3",
+        "diagnosis": "Sensorineural hearing loss, bilateral",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "H90.5",
+        "diagnosis": "Sensorineural hearing loss, unspecified",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "H90.8",
+        "diagnosis": "Mixed conductive and sensorineural hearing loss, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H91.1",
+        "diagnosis": "Presbycusis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H91.9",
+        "diagnosis": "Hearing loss, unspecified",
+        "jumlah_kunjungan": 13
+    },
+    {
+        "kode_icd": "H92.0",
+        "diagnosis": "Otalgia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H92.2",
+        "diagnosis": "Otorrhagia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "H93.1",
+        "diagnosis": "Tinnitus",
+        "jumlah_kunjungan": 22
+    },
+    {
+        "kode_icd": "H95.0",
+        "diagnosis": "Recurrent cholesteatoma of postmastoidectomy cavity",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "H95.1",
+        "diagnosis": "Other disorders following mastoidectomy",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I00",
+        "diagnosis": "Rheumatic fever without mention of heart involvement",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I01.9",
+        "diagnosis": "Acute rheumatic heart disease, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I05.0",
+        "diagnosis": "Mitral stenosis",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "I06.1",
+        "diagnosis": "Rheumatic aortic insufficiency",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I09.9",
+        "diagnosis": "Rheumatic heart disease, unspecified",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "I10",
+        "diagnosis": "Essential (primary) hypertension",
+        "jumlah_kunjungan": 248
+    },
+    {
+        "kode_icd": "I11.0",
+        "diagnosis": "Hypertensive heart disease with (congestive) heart failure",
+        "jumlah_kunjungan": 134
+    },
+    {
+        "kode_icd": "I11.9",
+        "diagnosis": "Hypertensive heart disease without (congestive) heart failure",
+        "jumlah_kunjungan": 516
+    },
+    {
+        "kode_icd": "I12.0",
+        "diagnosis": "Hypertensive renal disease with renal failure",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I13.0",
+        "diagnosis": "Hypertens heart and renal dis with (congestive) heart failure",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I13.1",
+        "diagnosis": "Hypertensive heart and renal disease with renal failure",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "I13.9",
+        "diagnosis": "Hypertensive heart and renal disease, unspecified",
+        "jumlah_kunjungan": 48
+    },
+    {
+        "kode_icd": "I15.0",
+        "diagnosis": "Renovascular hypertension",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I15.9",
+        "diagnosis": "Secondary hypertension, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I20.0",
+        "diagnosis": "Unstable angina",
+        "jumlah_kunjungan": 21
+    },
+    {
+        "kode_icd": "I20.8",
+        "diagnosis": "Other forms of angina pectoris",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I20.9",
+        "diagnosis": "Angina pectoris, unspecified",
+        "jumlah_kunjungan": 49
+    },
+    {
+        "kode_icd": "I21.0",
+        "diagnosis": "Acute transmural myocardial infarction of anterior wall",
+        "jumlah_kunjungan": 33
+    },
+    {
+        "kode_icd": "I21.1",
+        "diagnosis": "Acute transmural myocardial infarction of inferior wall",
+        "jumlah_kunjungan": 124
+    },
+    {
+        "kode_icd": "I21.3",
+        "diagnosis": "Acute transmural myocardial infarction of unspecified site",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I21.4",
+        "diagnosis": "Acute subendocardial myocardial infarction",
+        "jumlah_kunjungan": 135
+    },
+    {
+        "kode_icd": "I25.0",
+        "diagnosis": "Atherosclerotic cardiovascular disease, so described",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I25.1",
+        "diagnosis": "Atherosclerotic heart disease",
+        "jumlah_kunjungan": 177
+    },
+    {
+        "kode_icd": "I25.4",
+        "diagnosis": "Coronary artery aneurysm",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I25.6",
+        "diagnosis": "Silent myocardial ischaemia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I26.0",
+        "diagnosis": "Pulmonary embolism with mention of acute cor pulmonale",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I27.0",
+        "diagnosis": "Primary pulmonary hypertension",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "I27.8",
+        "diagnosis": "Other specified pulmonary heart diseases",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I27.9",
+        "diagnosis": "Pulmonary heart disease, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I30.9",
+        "diagnosis": "Acute pericarditis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I31.3",
+        "diagnosis": "Pericardial effusion (noninflammatory)",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "I34.1",
+        "diagnosis": "Mitral (valve) prolapse",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "I35.0",
+        "diagnosis": "Aortic (valve) stenosis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I37.0",
+        "diagnosis": "Pulmonary valve stenosis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I38",
+        "diagnosis": "Endocarditis, valve unspecified",
+        "jumlah_kunjungan": 64
+    },
+    {
+        "kode_icd": "I42.0",
+        "diagnosis": "Dilated cardiomyopathy",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I42.1",
+        "diagnosis": "Obstructive hypertrophic cardiomyopathy",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I44.2",
+        "diagnosis": "Atrioventricular block, complete",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I45.1",
+        "diagnosis": "Other and unspecified right bundle-branch block",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I47.1",
+        "diagnosis": "Supraventricular tachycardia",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "I48",
+        "diagnosis": "Atrial fibrillation and flutter",
+        "jumlah_kunjungan": 60
+    },
+    {
+        "kode_icd": "I49.3",
+        "diagnosis": "Ventricular premature depolarization",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "I49.8",
+        "diagnosis": "Other specified cardiac arrhythmias",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I50.0",
+        "diagnosis": "Congestive heart failure",
+        "jumlah_kunjungan": 305
+    },
+    {
+        "kode_icd": "I50.9",
+        "diagnosis": "Heart failure, unspecified",
+        "jumlah_kunjungan": 130
+    },
+    {
+        "kode_icd": "I51.6",
+        "diagnosis": "Cardiovascular disease, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I51.7",
+        "diagnosis": "Cardiomegaly",
+        "jumlah_kunjungan": 64
+    },
+    {
+        "kode_icd": "I51.9",
+        "diagnosis": "Heart disease, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I60.0",
+        "diagnosis": "Subarachnoid haemorrhage from carotid siphon and bifurcation",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I60.9",
+        "diagnosis": "Subarachnoid haemorrhage, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I61.5",
+        "diagnosis": "Intracerebral haemorrhage, intraventricular",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I61.9",
+        "diagnosis": "Intracerebral haemorrhage, unspecified",
+        "jumlah_kunjungan": 62
+    },
+    {
+        "kode_icd": "I62.0",
+        "diagnosis": "Subdural haemorrhage (acute)(nontraumatic)",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "I62.9",
+        "diagnosis": "Intracranial haemorrhage (nontraumatic), unspecified",
+        "jumlah_kunjungan": 14
+    },
+    {
+        "kode_icd": "I63.0",
+        "diagnosis": "Cerebral infarct due to thrombosis of precerebral arteries",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I63.1",
+        "diagnosis": "Cerebral infarction due to embolism of precerebral arteries",
+        "jumlah_kunjungan": 7
+    },
+    {
+        "kode_icd": "I63.8",
+        "diagnosis": "Other cerebral infarction",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I63.9",
+        "diagnosis": "Cerebral infarction, unspecified",
+        "jumlah_kunjungan": 558
+    },
+    {
+        "kode_icd": "I64",
+        "diagnosis": "Stroke, not specified as haemorrhage or infarction",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I67.8",
+        "diagnosis": "Other specified cerebrovascular diseases",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "I67.9",
+        "diagnosis": "Cerebrovascular disease, unspecified",
+        "jumlah_kunjungan": 318
+    },
+    {
+        "kode_icd": "I69.1",
+        "diagnosis": "Sequelae of intracerebral haemorrhage",
+        "jumlah_kunjungan": 25
+    },
+    {
+        "kode_icd": "I69.2",
+        "diagnosis": "Sequelae of other nontraumatic intracranial haemorrhage",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "I69.3",
+        "diagnosis": "Sequelae of cerebral infarction",
+        "jumlah_kunjungan": 88
+    },
+    {
+        "kode_icd": "I69.4",
+        "diagnosis": "Sequelae of stroke, not specified as haemorrhage or infarction",
+        "jumlah_kunjungan": 10
+    },
+    {
+        "kode_icd": "I69.8",
+        "diagnosis": "Sequelae of other and unspecified cerebrovascular diseases",
+        "jumlah_kunjungan": 31
+    },
+    {
+        "kode_icd": "I70.0",
+        "diagnosis": "Atherosclerosis of aorta",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I70.2",
+        "diagnosis": "Atherosclerosis of arteries of extremities",
+        "jumlah_kunjungan": 30
+    },
+    {
+        "kode_icd": "I70.8",
+        "diagnosis": "Atherosclerosis of other arteries",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I71.2",
+        "diagnosis": "Thoracic aortic aneurysm, without mention of rupture",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I72.4",
+        "diagnosis": "Aneurysm of artery of lower extremity",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I72.9",
+        "diagnosis": "Aneurysm of unspecified site",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I73.9",
+        "diagnosis": "Peripheral vascular disease, unspecified",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "I74.3",
+        "diagnosis": "Embolism and thrombosis of arteries of lower extremities",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I77.6",
+        "diagnosis": "Arteritis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I80.2",
+        "diagnosis": "Phlebitis and thrombophlebitis oth deep vessels low extremities",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I82.8",
+        "diagnosis": "Embolism and thrombosis of other specified veins",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "I82.9",
+        "diagnosis": "Embolism and thrombosis of unspecified vein",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "I83.9",
+        "diagnosis": "Varicose veins lower extremities without ulcer or inflammation",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I84.2",
+        "diagnosis": "Internal haemorrhoids without complication",
+        "jumlah_kunjungan": 13
+    },
+    {
+        "kode_icd": "I84.3",
+        "diagnosis": "External thrombosed haemorrhoids",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I84.4",
+        "diagnosis": "External haemorrhoids with other complications",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I84.8",
+        "diagnosis": "Unspecified haemorrhoids with other complications",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "I84.9",
+        "diagnosis": "Unspecified haemorrhoids without complication",
+        "jumlah_kunjungan": 26
+    },
+    {
+        "kode_icd": "I85.0",
+        "diagnosis": "Oesophageal varices with bleeding",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "I85.9",
+        "diagnosis": "Oesophageal varices without bleeding",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "I86.1",
+        "diagnosis": "Scrotal varices",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "I86.8",
+        "diagnosis": "Varicose veins of other specified sites",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I87.2",
+        "diagnosis": "Venous insufficiency (chronic)(peripheral)",
+        "jumlah_kunjungan": 23
+    },
+    {
+        "kode_icd": "I87.8",
+        "diagnosis": "Other specified disorders of veins",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I88.0",
+        "diagnosis": "Nonspecific mesenteric lymphadenitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I88.9",
+        "diagnosis": "Nonspecific lymphadenitis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "I89.0",
+        "diagnosis": "Lymphoedema, not elsewhere classified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "I95.9",
+        "diagnosis": "Hypotension, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J00",
+        "diagnosis": "Acute nasopharyngitis [common cold]",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J01.9",
+        "diagnosis": "Acute sinusitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J02.9",
+        "diagnosis": "Acute pharyngitis, unspecified",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "J03.9",
+        "diagnosis": "Acute tonsillitis, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "J04.0",
+        "diagnosis": "Acute laryngitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J06.0",
+        "diagnosis": "Acute laryngopharyngitis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "J06.8",
+        "diagnosis": "Other acute upper respiratory infections of multiple sites",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J06.9",
+        "diagnosis": "Acute upper respiratory infection, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "J12.8",
+        "diagnosis": "Other viral pneumonia",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "J18.0",
+        "diagnosis": "Bronchopneumonia, unspecified",
+        "jumlah_kunjungan": 12
+    },
+    {
+        "kode_icd": "J18.1",
+        "diagnosis": "Lobar pneumonia, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "J18.9",
+        "diagnosis": "Pneumonia, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J20.0",
+        "diagnosis": "Acute bronchitis due to mycoplasma pneumoniae",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "J20.9",
+        "diagnosis": "Acute bronchitis, unspecified",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "J30.0",
+        "diagnosis": "Vasomotor rhinitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J30.3",
+        "diagnosis": "Other allergic rhinitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J30.4",
+        "diagnosis": "Allergic rhinitis, unspecified",
+        "jumlah_kunjungan": 55
+    },
+    {
+        "kode_icd": "J31.2",
+        "diagnosis": "Chronic pharyngitis",
+        "jumlah_kunjungan": 55
+    },
+    {
+        "kode_icd": "J32.4",
+        "diagnosis": "Chronic pansinusitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J32.9",
+        "diagnosis": "Chronic sinusitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J33.0",
+        "diagnosis": "Polyp of nasal cavity",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J33.9",
+        "diagnosis": "Nasal polyp, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "J34.0",
+        "diagnosis": "Abscess, furuncle and carbuncle of nose",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J34.2",
+        "diagnosis": "Deviated nasal septum",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "J34.3",
+        "diagnosis": "Hypertrophy of nasal turbinates",
+        "jumlah_kunjungan": 20
+    },
+    {
+        "kode_icd": "J34.8",
+        "diagnosis": "Other specified disorders of nose and nasal sinuses",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J35.0",
+        "diagnosis": "Chronic tonsillitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J35.1",
+        "diagnosis": "Hypertrophy of tonsils",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J35.2",
+        "diagnosis": "Hypertrophy of adenoids",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J35.3",
+        "diagnosis": "Hypertrophy of tonsils with hypertrophy of adenoids",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J37.0",
+        "diagnosis": "Chronic laryngitis",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "J38.7",
+        "diagnosis": "Other diseases of larynx",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "J39.0",
+        "diagnosis": "Retropharyngeal and parapharyngeal abscess",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J40",
+        "diagnosis": "Bronchitis, not specified as acute or chronic",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J42",
+        "diagnosis": "Unspecified chronic bronchitis",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "J44.0",
+        "diagnosis": "Chronic obstructive pulmonary disease with acute lower respiratory infection",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J44.1",
+        "diagnosis": "Chronic obstructive pulmonary disease with acute exacerbation, unspecified",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "J44.8",
+        "diagnosis": "Other specified chronic obstructive pulmonary disease",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J44.9",
+        "diagnosis": "Chronic obstructive pulmonary disease, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J45.9",
+        "diagnosis": "Asthma, unspecified",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "J47",
+        "diagnosis": "Bronchiectasis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J81",
+        "diagnosis": "Pulmonary oedema",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J84.1",
+        "diagnosis": "Other interstitial pulmonary diseases with fibrosis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J85.1",
+        "diagnosis": "Abscess of lung with pneumonia",
+        "jumlah_kunjungan": 9
+    },
+    {
+        "kode_icd": "J85.2",
+        "diagnosis": "Abscess of lung without pneumonia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J86.0",
+        "diagnosis": "Pyothorax with fistula",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J86.9",
+        "diagnosis": "Pyothorax without fistula",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "J90",
+        "diagnosis": "Pleural effusion, not elsewhere classified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "J91",
+        "diagnosis": "Pleural effusion in conditions classified elsewhere",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J93.9",
+        "diagnosis": "Pneumothorax, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J94.2",
+        "diagnosis": "Haemothorax",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J98.0",
+        "diagnosis": "Diseases of bronchus, not elsewhere classified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "J98.8",
+        "diagnosis": "Other specified respiratory disorders",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K00.6",
+        "diagnosis": "Disturbances in tooth eruption",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K01.1",
+        "diagnosis": "Impacted teeth",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K02.1",
+        "diagnosis": "Caries of dentine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K02.9",
+        "diagnosis": "Dental caries, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K03.1",
+        "diagnosis": "Abrasion of teeth",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K04.0",
+        "diagnosis": "Pulpitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K04.1",
+        "diagnosis": "Necrosis of pulp",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K04.4",
+        "diagnosis": "Acute apical periodontitis of pulpal origin",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K04.6",
+        "diagnosis": "Periapical abscess with sinus",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K04.7",
+        "diagnosis": "Periapical abscess without sinus",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "K04.8",
+        "diagnosis": "Radicular cyst",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K05.0",
+        "diagnosis": "Acute gingivitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K05.1",
+        "diagnosis": "Chronic gingivitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K05.2",
+        "diagnosis": "Acute periodontitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K05.3",
+        "diagnosis": "Chronic periodontitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K05.5",
+        "diagnosis": "Other periodontal diseases",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K06.1",
+        "diagnosis": "Gingival enlargement",
+        "jumlah_kunjungan": 98
+    },
+    {
+        "kode_icd": "K06.2",
+        "diagnosis": "Gingival and edentulous alveolar ridge les assoc with traum",
+        "jumlah_kunjungan": 57
+    },
+    {
+        "kode_icd": "K06.8",
+        "diagnosis": "Other specified disorder of gingiva and edentulous alveolar ridge",
+        "jumlah_kunjungan": 181
+    },
+    {
+        "kode_icd": "K07.3",
+        "diagnosis": "Anomalies of tooth position",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K07.6",
+        "diagnosis": "Temporomandibular joint disorders",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K08.3",
+        "diagnosis": "Retained dental root",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K09.0",
+        "diagnosis": "Developmental odontogenic cysts",
+        "jumlah_kunjungan": 26
+    },
+    {
+        "kode_icd": "K09.1",
+        "diagnosis": "Developmental (nonodontogenic) cysts of oral region",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K09.9",
+        "diagnosis": "Cyst of oral region, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K11.2",
+        "diagnosis": "Sialoadenitis",
+        "jumlah_kunjungan": 16
+    },
+    {
+        "kode_icd": "K11.6",
+        "diagnosis": "Mucocele of salivary gland",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K12.0",
+        "diagnosis": "Recurrent oral aphthae",
+        "jumlah_kunjungan": 29
+    },
+    {
+        "kode_icd": "K12.2",
+        "diagnosis": "Cellulitis and abscess of mouth",
+        "jumlah_kunjungan": 27
+    },
+    {
+        "kode_icd": "K13.6",
+        "diagnosis": "Irritative hyperplasia of oral mucosa",
+        "jumlah_kunjungan": 102
+    },
+    {
+        "kode_icd": "K20",
+        "diagnosis": "Oesophagitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K21.0",
+        "diagnosis": "Gastro-oesophageal reflux disease with oesophagitis",
+        "jumlah_kunjungan": 91
+    },
+    {
+        "kode_icd": "K21.9",
+        "diagnosis": "Gastro-oesophageal reflux disease without oesophagitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K22.0",
+        "diagnosis": "Achalasia of cardia",
+        "jumlah_kunjungan": 113
+    },
+    {
+        "kode_icd": "K22.4",
+        "diagnosis": "Dyskinesia of oesophagus",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K22.9",
+        "diagnosis": "Disease of oesophagus, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K25.1",
+        "diagnosis": "Gastric ulcer, acute with perforation",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K25.2",
+        "diagnosis": "Gastric ulcer, acute with both haemorrhage and perforation",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "K25.3",
+        "diagnosis": "Gastric ulcer, acute without haemorrhage or perforation",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K25.7",
+        "diagnosis": "Gastric ulcer, chronic without haemorrhage or perforation",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K25.9",
+        "diagnosis": "Gastric ulcer, unspec as acute or chronic w'out haemorrhage or perforation",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K26.9",
+        "diagnosis": "Unspec as acute or chronic without haemorrhage or perforation",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K29.0",
+        "diagnosis": "Acute haemorrhagic gastritis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "K29.1",
+        "diagnosis": "Other acute gastritis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "K29.3",
+        "diagnosis": "Chronic superficial gastritis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K29.5",
+        "diagnosis": "Chronic gastritis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K29.6",
+        "diagnosis": "Other gastritis",
+        "jumlah_kunjungan": 29
+    },
+    {
+        "kode_icd": "K29.7",
+        "diagnosis": "Gastritis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K29.9",
+        "diagnosis": "Gastroduodenitis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K30",
+        "diagnosis": "Dyspepsia",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K31.1",
+        "diagnosis": "Adult hypertrophic pyloric stenosis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K31.7",
+        "diagnosis": "Polyp of stomach and duodenum",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K31.8",
+        "diagnosis": "Other specified diseases of stomach and duodenum",
+        "jumlah_kunjungan": 27
+    },
+    {
+        "kode_icd": "K31.9",
+        "diagnosis": "Disease of stomach and duodenum, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "K35.2",
+        "diagnosis": "Acute appendicitis with generalized peritonitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K35.3",
+        "diagnosis": "Acute appendicitis with localized peritonitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K35.8",
+        "diagnosis": "Acute appendicitis, other and unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K36",
+        "diagnosis": "Other appendicitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K38.8",
+        "diagnosis": "Other specified diseases of appendix",
+        "jumlah_kunjungan": 196
+    },
+    {
+        "kode_icd": "K40.9",
+        "diagnosis": "Unilateral or unspecified inguinal hernia, without obstruction or gangrene",
+        "jumlah_kunjungan": 73
+    },
+    {
+        "kode_icd": "K42.9",
+        "diagnosis": "Umbilical hernia without obstruction or gangrene",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K43.9",
+        "diagnosis": "Ventral hernia without obstruction or gangrene",
+        "jumlah_kunjungan": 13
+    },
+    {
+        "kode_icd": "K50.0",
+        "diagnosis": "Crohn's disease of small intestine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K50.8",
+        "diagnosis": "Other crohn's disease",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K51.0",
+        "diagnosis": "Ulcerative (chronic) enterocolitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K51.4",
+        "diagnosis": "Pseudopolyposis of colon",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K51.9",
+        "diagnosis": "Ulcerative colitis, unspecified",
+        "jumlah_kunjungan": 25
+    },
+    {
+        "kode_icd": "K52.2",
+        "diagnosis": "Allergic and dietetic gastroenteritis and colitis",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "K52.9",
+        "diagnosis": "Noninfective gastroenteritis and colitis, unspecified",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "K55.1",
+        "diagnosis": "Chronic vascular disorders of intestine",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K56.0",
+        "diagnosis": "Paralytic ileus",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "K56.4",
+        "diagnosis": "Other impaction of intestine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K56.6",
+        "diagnosis": "Other and unspecified intestinal obstruction",
+        "jumlah_kunjungan": 300
+    },
+    {
+        "kode_icd": "K57.1",
+        "diagnosis": "Diverticular disease of small intestine without perforation or abscess",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K57.9",
+        "diagnosis": "Diverticular disease of intestine, part unspecified, without perforation or abscess",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K58.9",
+        "diagnosis": "Irritable bowel syndrome without diarrhoea",
+        "jumlah_kunjungan": 146
+    },
+    {
+        "kode_icd": "K59.0",
+        "diagnosis": "Constipation",
+        "jumlah_kunjungan": 14
+    },
+    {
+        "kode_icd": "K59.2",
+        "diagnosis": "Neurogenic bowel, not elsewhere classified",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "K60.2",
+        "diagnosis": "Anal fissure, unspecified",
+        "jumlah_kunjungan": 56
+    },
+    {
+        "kode_icd": "K60.3",
+        "diagnosis": "Anal fistula",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "K60.4",
+        "diagnosis": "Rectal fistula",
+        "jumlah_kunjungan": 16
+    },
+    {
+        "kode_icd": "K60.5",
+        "diagnosis": "Anorectal fistula",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K61.0",
+        "diagnosis": "Anal abscess",
+        "jumlah_kunjungan": 13
+    },
+    {
+        "kode_icd": "K62.1",
+        "diagnosis": "Rectal polyp",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K62.8",
+        "diagnosis": "Other specified diseases of anus and rectum",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K63.2",
+        "diagnosis": "Fistula of intestine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K63.3",
+        "diagnosis": "Ulcer of intestine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K63.5",
+        "diagnosis": "Polyp of colon",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "K65.0",
+        "diagnosis": "Acute peritonitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K65.9",
+        "diagnosis": "Peritonitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K66.0",
+        "diagnosis": "Peritoneal adhesions",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "K67.3",
+        "diagnosis": "Tuberculous peritonitis",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "K70.3",
+        "diagnosis": "Alcoholic cirrhosis of liver",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "K72.0",
+        "diagnosis": "Acute and subacute hepatic failure",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K73.1",
+        "diagnosis": "Chronic lobular hepatitis, not elsewhere classified",
+        "jumlah_kunjungan": 7
+    },
+    {
+        "kode_icd": "K73.9",
+        "diagnosis": "Chronic hepatitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K74.2",
+        "diagnosis": "Hepatic fibrosis with hepatic sclerosis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K74.6",
+        "diagnosis": "Other and unspecified cirrhosis of liver",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "K75.0",
+        "diagnosis": "Abscess of liver",
+        "jumlah_kunjungan": 15
+    },
+    {
+        "kode_icd": "K75.9",
+        "diagnosis": "Inflammatory liver disease, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "K76.0",
+        "diagnosis": "Fatty (change of) liver, not elsewhere classified",
+        "jumlah_kunjungan": 7
+    },
+    {
+        "kode_icd": "K76.8",
+        "diagnosis": "Other specified diseases of liver",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "K76.9",
+        "diagnosis": "Liver disease, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K80.0",
+        "diagnosis": "Calculus of gallbladder with acute cholecystitis",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "K80.1",
+        "diagnosis": "Calculus of gallbladder with other cholecystitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K80.2",
+        "diagnosis": "Calculus of gallbladder without cholecystitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K80.3",
+        "diagnosis": "Calculus of bile duct with cholangitis",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "K80.5",
+        "diagnosis": "Calculus of bile duct without cholangitis or cholecystitis",
+        "jumlah_kunjungan": 15
+    },
+    {
+        "kode_icd": "K80.8",
+        "diagnosis": "Other cholelithiasis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "K81.9",
+        "diagnosis": "Cholecystitis, unspecified",
+        "jumlah_kunjungan": 7
+    },
+    {
+        "kode_icd": "K83.0",
+        "diagnosis": "Cholangitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K83.1",
+        "diagnosis": "Obstruction of bile duct",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "K83.8",
+        "diagnosis": "Other specified diseases of biliary tract",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K85.9",
+        "diagnosis": "Acute pancreatitis, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "K92.0",
+        "diagnosis": "Haematemesis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K92.1",
+        "diagnosis": "Melaena",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "K92.2",
+        "diagnosis": "Gastrointestinal haemorrhage, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "K92.8",
+        "diagnosis": "Other specified diseases of digestive system",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L01.0",
+        "diagnosis": "Impetigo [any organism] [any site]",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L02.1",
+        "diagnosis": "Cutaneous abscess, furuncle and carbuncle of neck",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "L02.2",
+        "diagnosis": "Cutaneous abscess, furuncle and carbuncle of trunk",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L02.4",
+        "diagnosis": "Cutaneous abscess, furuncle and carbuncle of limb",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L02.9",
+        "diagnosis": "Cutaneous abscess, furuncle and carbuncle, unspecified",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "L03.0",
+        "diagnosis": "Cellulitis of finger and toe",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "L03.1",
+        "diagnosis": "Cellulitis of other parts of limb",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L03.2",
+        "diagnosis": "Cellulitis of face",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L03.9",
+        "diagnosis": "Cellulitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L04.0",
+        "diagnosis": "Acute lymphadenitis of face, head and neck",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L04.2",
+        "diagnosis": "Acute lymphadenitis of upper limb",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L04.9",
+        "diagnosis": "Acute lymphadenitis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L08.0",
+        "diagnosis": "Pyoderma",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L08.9",
+        "diagnosis": "Local infection of skin and subcutaneous tissue, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L10.0",
+        "diagnosis": "Pemphigus vulgaris",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L10.9",
+        "diagnosis": "Pemphigus, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L12.0",
+        "diagnosis": "Bullous pemphigoid",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L13.9",
+        "diagnosis": "Bullous disorder, unspecified",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "L20.8",
+        "diagnosis": "Other atopic dermatitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L20.9",
+        "diagnosis": "Atopic dermatitis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L21.0",
+        "diagnosis": "Seborrhoea capitis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L21.8",
+        "diagnosis": "Other seborrhoeic dermatitis",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L21.9",
+        "diagnosis": "Seborrhoeic dermatitis, unspecified",
+        "jumlah_kunjungan": 21
+    },
+    {
+        "kode_icd": "L23.5",
+        "diagnosis": "Allergic contact dermatitis due to other chemical products",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L23.8",
+        "diagnosis": "Allergic contact dermatitis due to other agents",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L23.9",
+        "diagnosis": "Allergic contact dermatitis, unspecified cause",
+        "jumlah_kunjungan": 18
+    },
+    {
+        "kode_icd": "L24.9",
+        "diagnosis": "Irritant contact dermatitis, unspecified cause",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L27.0",
+        "diagnosis": "Generalized skin eruption due to drugs and medicaments",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L27.2",
+        "diagnosis": "Dermatitis due to ingested food",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L28.0",
+        "diagnosis": "Lichen simplex chronicus",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L28.1",
+        "diagnosis": "Prurigo nodularis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L28.2",
+        "diagnosis": "Other prurigo",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L29.8",
+        "diagnosis": "Other pruritus",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L29.9",
+        "diagnosis": "Pruritus, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L30.0",
+        "diagnosis": "Nummular dermatitis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L30.1",
+        "diagnosis": "Dyshidrosis [pompholyx]",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L30.5",
+        "diagnosis": "Pityriasis alba",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L30.9",
+        "diagnosis": "Dermatitis, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L40.0",
+        "diagnosis": "Psoriasis vulgaris",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L40.1",
+        "diagnosis": "Generalized pustular psoriasis",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L40.4",
+        "diagnosis": "Guttate psoriasis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L40.9",
+        "diagnosis": "Psoriasis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L42",
+        "diagnosis": "Pityriasis rosea",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L50.0",
+        "diagnosis": "Allergic urticaria",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L50.1",
+        "diagnosis": "Idiopathic urticaria",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L50.2",
+        "diagnosis": "Urticaria due to cold and heat",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "L50.3",
+        "diagnosis": "Dermatographic urticaria",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L50.9",
+        "diagnosis": "Urticaria, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L51.1",
+        "diagnosis": "Bullous erythema multiforme",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L52",
+        "diagnosis": "Erythema nodosum",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L57.0",
+        "diagnosis": "Actinic keratosis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L63.9",
+        "diagnosis": "Alopecia areata, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L64.8",
+        "diagnosis": "Other androgenic alopecia",
+        "jumlah_kunjungan": 16
+    },
+    {
+        "kode_icd": "L65.0",
+        "diagnosis": "Telogen effluvium",
+        "jumlah_kunjungan": 8
+    },
+    {
+        "kode_icd": "L65.9",
+        "diagnosis": "Nonscarring hair loss, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L70.0",
+        "diagnosis": "Acne vulgaris",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L71.0",
+        "diagnosis": "Perioral dermatitis",
+        "jumlah_kunjungan": 11
+    },
+    {
+        "kode_icd": "L72.0",
+        "diagnosis": "Epidermal cyst",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L73.8",
+        "diagnosis": "Other specified follicular disorders",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L73.9",
+        "diagnosis": "Follicular disorder, unspecified",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "L74.0",
+        "diagnosis": "Miliaria rubra",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L74.3",
+        "diagnosis": "Miliaria, unspecified",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "L80",
+        "diagnosis": "Vitiligo",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L81.0",
+        "diagnosis": "Postinflammatory hyperpigmentation",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L81.8",
+        "diagnosis": "Other specified disorders of pigmentation",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L81.9",
+        "diagnosis": "Disorder of pigmentation, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L82",
+        "diagnosis": "Seborrhoeic keratosis",
+        "jumlah_kunjungan": 10
+    },
+    {
+        "kode_icd": "L84",
+        "diagnosis": "Corns and callosities",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "L85.1",
+        "diagnosis": "Acquired keratosis [keratoderma] palmaris et plantaris",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L85.3",
+        "diagnosis": "Xerosis cutis",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "L85.8",
+        "diagnosis": "Other specified epidermal thickening",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "L90.0",
+        "diagnosis": "Lichen sclerosus et atrophicus",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L90.5",
+        "diagnosis": "Scar conditions and fibrosis of skin",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L91.0",
+        "diagnosis": "Keloid scar",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L91.8",
+        "diagnosis": "Other hypertrophic disorders of skin",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L92.3",
+        "diagnosis": "Foreign body granuloma of skin and subcutaneous tissue",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L92.9",
+        "diagnosis": "Granulomatous disorder of skin and subcutaneous tissue, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L93.1",
+        "diagnosis": "Subacute cutaneous lupus erythematosus",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "L94.0",
+        "diagnosis": "Localized scleroderma [morphea]",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L95.9",
+        "diagnosis": "Vasculitis limited to skin, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L97",
+        "diagnosis": "Ulcer of lower limb, not elsewhere classified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L98.0",
+        "diagnosis": "Pyogenic granuloma",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "L98.4",
+        "diagnosis": "Chronic ulcer of skin, not elsewhere classified",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "L98.9",
+        "diagnosis": "Disorder of skin and subcutaneous tissue, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "L99.0",
+        "diagnosis": "Amyloidosis of skin",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M00.06",
+        "diagnosis": "Staphylococcal arthritis and polyarthritis, lower leg",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M00.8",
+        "diagnosis": "Arthritis and polyarthritis due other specified bacterial agents",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M00.9",
+        "diagnosis": "Pyogenic arthritis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M00.96",
+        "diagnosis": "Pyogenic arthritis, unspecified, lower leg",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M06.0",
+        "diagnosis": "Seronegative rheumatoid arthritis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M06.9",
+        "diagnosis": "Rheumatoid arthritis, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "M08.0",
+        "diagnosis": "Juvenile rheumatoid arthritis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M08.3",
+        "diagnosis": "Juvenile polyarthritis (seronegative)",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M10.0",
+        "diagnosis": "Idiopathic gout",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "M10.9",
+        "diagnosis": "Gout, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M13.0",
+        "diagnosis": "Polyarthritis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M13.1",
+        "diagnosis": "Monoarthritis, not elsewhere classified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M13.9",
+        "diagnosis": "Arthritis, unspecified",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "M13.90",
+        "diagnosis": "Arthritis, unspecified, multiple sites",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "M15.0",
+        "diagnosis": "Primary generalized (osteo)arthrosis",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "M15.4",
+        "diagnosis": "Erosive (osteo)arthrosis",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "M16.0",
+        "diagnosis": "Primary coxarthrosis, bilateral",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M16.9",
+        "diagnosis": "Coxarthrosis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M17.0",
+        "diagnosis": "Primary gonarthrosis, bilateral",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M17.1",
+        "diagnosis": "Other primary gonarthrosis",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M17.2",
+        "diagnosis": "Post-traumatic gonarthrosis, bilateral",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M17.9",
+        "diagnosis": "Gonarthrosis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M19.0",
+        "diagnosis": "Primary arthrosis of other joints",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "M19.01",
+        "diagnosis": "Primary arthrosis of other joints, shoulder region",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M19.05",
+        "diagnosis": "Primary arthrosis of other joints, pelvic and thigh",
+        "jumlah_kunjungan": 3
+    },
+    {
+        "kode_icd": "M19.08",
+        "diagnosis": "Primary arthrosis of other joints, other sites",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M19.9",
+        "diagnosis": "Arthrosis, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M19.90",
+        "diagnosis": "Arthrosis, unspecified, multiple sites",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M19.91",
+        "diagnosis": "Arthrosis, unspecified, shouder region",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M19.92",
+        "diagnosis": "Arthrosis, unspecified, upper arm",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M19.94",
+        "diagnosis": "Arthrosis, unspecified, hand",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M19.95",
+        "diagnosis": "Arthrosis, unspecified, pelvic and thigh",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M19.96",
+        "diagnosis": "Arthrosis, unspecified, lower leg",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M19.97",
+        "diagnosis": "Arthrosis, unspecified, ankle and foot",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "M19.98",
+        "diagnosis": "Arthrosis, unspecified, other sites",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M20.6",
+        "diagnosis": "Acquired deformity of toe(s), unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M21.3",
+        "diagnosis": "Wrist or foot drop (acquired)",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M21.37",
+        "diagnosis": "Wrist or foot drop (acquired), ankle and foot",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M21.54",
+        "diagnosis": "Acquired clawhand, clubhand, clawfoot and clubfoot, hand",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M21.6",
+        "diagnosis": "Other acquired deformities of ankle and foot",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M21.9",
+        "diagnosis": "Acquired deformity of limb, unspecified 1",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M22.0",
+        "diagnosis": "Recurrent dislocation of patella 1",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M22.9",
+        "diagnosis": "Disorder of patella, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M24.0",
+        "diagnosis": "Loose body in joint",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M24.2",
+        "diagnosis": "Disorder of ligament",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M24.5",
+        "diagnosis": "Contracture of joint",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M24.50",
+        "diagnosis": "Contracture of joint, multiple sites",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M24.54",
+        "diagnosis": "Contracture of joint, hand",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M24.56",
+        "diagnosis": "Contracture of joint, lower leg",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M24.6",
+        "diagnosis": "Ankylosis of joint",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M24.9",
+        "diagnosis": "Joint derangement, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M25.46",
+        "diagnosis": "Effusion of joint, lower leg",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M25.5",
+        "diagnosis": "Pain in joint",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M25.50",
+        "diagnosis": "Pain in joint, multiple sites",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M25.57",
+        "diagnosis": "Pain in joint, ankle and foot",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M25.6",
+        "diagnosis": "Stiffness of joint, not elsewhere classified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M25.86",
+        "diagnosis": "Other specified joint disorders, lower leg",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "M32.0",
+        "diagnosis": "Drug-induced systemic lupus erythematosus",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M32.1",
+        "diagnosis": "Systemic lupus erythematosus with organ or system involvement",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M32.8",
+        "diagnosis": "Other forms of systemic lupus erythematosus",
+        "jumlah_kunjungan": 5
+    },
+    {
+        "kode_icd": "M32.9",
+        "diagnosis": "Systemic lupus erythematosus, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M34.9",
+        "diagnosis": "Systemic sclerosis, unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M35.0",
+        "diagnosis": "Sicca syndrome [sjogren]",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M35.7",
+        "diagnosis": "Hypermobility syndrome",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M35.9",
+        "diagnosis": "Systemic involvement of connective tissue, unspecified",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M40.42",
+        "diagnosis": "Other lordosis, cervical region",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M40.52",
+        "diagnosis": "Lordosis, unspecified, cervical region",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M41.0",
+        "diagnosis": "Infantile idiopathic scoliosis",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M41.09",
+        "diagnosis": "Infantile idiopathic scoliosis, site unspecified",
+        "jumlah_kunjungan": 33
+    },
+    {
+        "kode_icd": "M41.12",
+        "diagnosis": "Juvenile idiopathic scoliosis, cervical region",
+        "jumlah_kunjungan": 20
+    },
+    {
+        "kode_icd": "M41.9",
+        "diagnosis": "Scoliosis, unspecified",
+        "jumlah_kunjungan": 2
+    },
+    {
+        "kode_icd": "M41.90",
+        "diagnosis": "Scoliosis, multiple sites in spine",
+        "jumlah_kunjungan": 38
+    },
+    {
+        "kode_icd": "M41.95",
+        "diagnosis": "Scoliosis, unspecified, thoracolumbar region",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M41.96",
+        "diagnosis": "Scoliosis, unspecified, lumbar region",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "M41.99",
+        "diagnosis": "Scoliosis, unspecified, site unspecified",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M42.0",
+        "diagnosis": "Juvenile osteochondrosis of spine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M43.0",
+        "diagnosis": "Spondylolysis",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "M43.02",
+        "diagnosis": "Spondylolysis, cervical region",
+        "jumlah_kunjungan": 18
+    },
+    {
+        "kode_icd": "M43.06",
+        "diagnosis": "Spondylolysis, lumbar region",
+        "jumlah_kunjungan": 1
+    },
+    {
+        "kode_icd": "M43.1",
+        "diagnosis": "Spondylolisthesis",
+        "jumlah_kunjungan": 6
+    },
+    {
+        "kode_icd": "M43.16",
+        "diagnosis": "Spondylolisthesis, lumbar region",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M43.2",
+        "diagnosis": "Other fusion of spine",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M43.20",
+        "diagnosis": "Other fusion of spine, multiple sites in spine",
+        "jumlah_kunjungan": 4
+    },
+    {
+        "kode_icd": "M43.26",
+        "diagnosis": "Other fusion of spine, lumbar region",
+        "jumlah_kunjungan": 0
+    },
+    {
+        "kode_icd": "M43.6",
+        "diagnosis": "Torticollis",
+        "jumlah_kunjungan": 0
+    }
+]

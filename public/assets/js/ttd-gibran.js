@@ -120,8 +120,8 @@ function unduhPDF() {
             return [
                 index + 1,
                 row.kode_icd ?? '',
-                row.diagnosis_penyakit ?? '',
-                row.jumlah_kasus ?? ''
+                row.diagnosis ?? '',
+                row.jumlah_kunjungan ?? ''
             ];
         });
 

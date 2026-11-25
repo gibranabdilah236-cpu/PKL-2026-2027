@@ -55,8 +55,8 @@
                         <tr>
                             <td>{{ $i + 1 }}</td>
                             <td>{{ $row->kode_icd }}</td>
-                            <td>{{ $row->diagnosis_penyakit }}</td>
-                            <td>{{ $row->jumlah_kasus }}</td>
+                            <td>{{ $row->diagnosis }}</td>
+                            <td>{{ $row->jumlah_kunjungan }}</td>
                         </tr>
                         @endforeach
                         </tbody>

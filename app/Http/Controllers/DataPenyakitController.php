@@ -14,4 +14,4 @@ class DataPenyakitController extends Controller
 
     return view('menu-gibran', compact('data', 'semuaDataPenyakitPdf'));
 }
-}
+} 
