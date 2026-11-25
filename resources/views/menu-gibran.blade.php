@@ -125,7 +125,8 @@
                         </fieldset>
                     </div>
 
-                    <button type="button" class="btn btn-success mt-3" id="btnSimpanCetak" onclick="simpanDanCetak()">Simpan &amp; Cetak</button>
+                    <button type="button" class="btn btn-success mt-3" id="btnSimpan" onclick="simpanTTD()">Simpan</button>
+                    <button type="button" class="btn btn-info mt-3" onclick="cetakPDF()">Cetak</button>
                     <button type="button" class="btn btn-primary mt-3" onclick="unduhPDF()">Unduh PDF</button>
                 </div>
             </div>

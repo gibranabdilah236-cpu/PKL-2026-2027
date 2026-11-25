@@ -20,6 +20,7 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/tanda-tangan', [TtdTanganController::class, 'index'])->name('ttd.gibran.index');
     Route::post('/tanda-tangan/simpan', [TtdTanganController::class, 'store'])->name('ttd.gibran.store');
+    Route::delete('/tanda-tangan-gibran/{kunci}', [TtdTanganController::class, 'destroy'])->name('ttd.gibran.destroy');
     
     Route::get('/menu-aby', [MenuAbyController::class, 'index'])->name('menu.aby');
     Route::get('/menu-aby/pdf', [MenuAbyController::class, 'pdf'])->name('menu.aby.pdf');

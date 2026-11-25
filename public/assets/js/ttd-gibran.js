@@ -1,86 +1,66 @@
+var NAMA_TTD = {
+    ttd1: 'Gibran D. Abdilah (Orang Pertama)',
+    ttd2: 'Gibran D. Abdilah (Orang Kedua)'
+};
+
+var ID_WAKTU = {
+    ttd1: 'tanggal1',
+    ttd2: 'jam2'
+};
+
+function csrfToken() {
+    var token = document.querySelector('meta[name="csrf-token"]');
+    return token ? token.getAttribute('content') : '';
+}
+
 function aktifkanTTD(id) {
     var canvas = document.getElementById(id);
     if (!canvas) return;
 
     var ctx = canvas.getContext('2d');
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
     var gambar = false;
 
     function getKoordinat(e) {
         var rect = canvas.getBoundingClientRect();
         var scaleX = canvas.width / rect.width;
         var scaleY = canvas.height / rect.height;
-
-        if (e.touches && e.touches.length > 0) {
-            return {
-                x: (e.touches[0].clientX - rect.left) * scaleX,
-                y: (e.touches[0].clientY - rect.top) * scaleY
-            };
-        }
+        var titik = (e.touches && e.touches.length > 0) ? e.touches[0] : e;
 
         return {
-            x: (e.clientX - rect.left) * scaleX,
-            y: (e.clientY - rect.top) * scaleY
+            x: (titik.clientX - rect.left) * scaleX,
+            y: (titik.clientY - rect.top) * scaleY
         };
     }
 
-    canvas.addEventListener('mousedown', function (e) {
+    function mulai(e) {
         gambar = true;
         var pos = getKoordinat(e);
         ctx.beginPath();
         ctx.moveTo(pos.x, pos.y);
-    });
+    }
 
-    canvas.addEventListener('mousemove', function (e) {
+    function gerak(e) {
         if (!gambar) return;
         var pos = getKoordinat(e);
         ctx.lineTo(pos.x, pos.y);
         ctx.stroke();
-    });
+    }
 
-    window.addEventListener('mouseup', function () {
-        gambar = false;
-    });
+    canvas.addEventListener('mousedown', mulai);
+    canvas.addEventListener('mousemove', gerak);
+    window.addEventListener('mouseup', function () { gambar = false; });
 
-    canvas.addEventListener('touchstart', function (e) {
-        e.preventDefault();
-        gambar = true;
-        var pos = getKoordinat(e);
-        ctx.beginPath();
-        ctx.moveTo(pos.x, pos.y);
-    }, { passive: false });
-
-    canvas.addEventListener('touchmove', function (e) {
-        e.preventDefault();
-        if (!gambar) return;
-        var pos = getKoordinat(e);
-        ctx.lineTo(pos.x, pos.y);
-        ctx.stroke();
-    }, { passive: false });
-
-    canvas.addEventListener('touchend', function () {
-        gambar = false;
-    });
+    canvas.addEventListener('touchstart', function (e) { e.preventDefault(); mulai(e); }, { passive: false });
+    canvas.addEventListener('touchmove', function (e) { e.preventDefault(); gerak(e); }, { passive: false });
+    canvas.addEventListener('touchend', function () { gambar = false; });
 }
 
-function hapusTTD(id) {
+function bersihkanTTD(id) {
     var canvas = document.getElementById(id);
-    if (!canvas) return;
-    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function isiTanggalJam() {
-    var sekarang = new Date();
-    var tahun = sekarang.getFullYear();
-    var bulan = String(sekarang.getMonth() + 1).padStart(2, '0');
-    var hari = String(sekarang.getDate()).padStart(2, '0');
-    var jam = String(sekarang.getHours()).padStart(2, '0');
-    var menit = String(sekarang.getMinutes()).padStart(2, '0');
-
-    var elTanggal = document.getElementById('tanggal1');
-    var elJam = document.getElementById('jam2');
-
-    if (elTanggal) elTanggal.value = tahun + '-' + bulan + '-' + hari;
-    if (elJam) elJam.value = jam + ':' + menit;
+    if (canvas) canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function canvasKosong(canvas) {
@@ -90,8 +70,73 @@ function canvasKosong(canvas) {
     return canvas.toDataURL() === kosong.toDataURL();
 }
 
-function simpanKeDatabase(namaPengguna, base64Ttd) {
-    var token = document.querySelector('meta[name="csrf-token"]');
+function isiWaktuSekarang(id) {
+    var el = document.getElementById(ID_WAKTU[id]);
+    if (!el) return;
+
+    var sekarang = new Date();
+    var bulan = String(sekarang.getMonth() + 1).padStart(2, '0');
+    var hari = String(sekarang.getDate()).padStart(2, '0');
+    var jam = String(sekarang.getHours()).padStart(2, '0');
+    var menit = String(sekarang.getMinutes()).padStart(2, '0');
+
+    el.value = id === 'ttd1'
+        ? sekarang.getFullYear() + '-' + bulan + '-' + hari
+        : jam + ':' + menit;
+}
+
+function hapusTTD(id) {
+    if (!ttdTersimpan || !ttdTersimpan[id]) {
+        bersihkanTTD(id);
+        return;
+    }
+
+    if (!confirm('Paraf ini sudah tersimpan di database. Hapus juga dari database?')) return;
+
+    fetch('/tanda-tangan-gibran/' + id, {
+        method: 'DELETE',
+        credentials: 'same-origin',
+        headers: {
+            'Accept': 'application/json',
+            'X-CSRF-TOKEN': csrfToken()
+        }
+    })
+    .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        ttdTersimpan[id] = null;
+        bersihkanTTD(id);
+        isiWaktuSekarang(id);
+    })
+    .catch(function (error) {
+        alert('Paraf gagal dihapus dari database: ' + error.message);
+    });
+}
+
+function muatTTDTersimpan() {
+    ['ttd1', 'ttd2'].forEach(function (id) {
+        var data = ttdTersimpan ? ttdTersimpan[id] : null;
+        var el = document.getElementById(ID_WAKTU[id]);
+
+        if (data && data.waktu) {
+            el.value = data.waktu;
+        } else {
+            isiWaktuSekarang(id);
+        }
+
+        if (!data || !data.gambar) return;
+
+        var canvas = document.getElementById(id);
+        var img = new Image();
+        img.onload = function () {
+            canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+        img.src = data.gambar;
+    });
+}
+
+function simpanKeDatabase(id) {
+    var gambar = document.getElementById(id).toDataURL('image/png');
+    var waktu = document.getElementById(ID_WAKTU[id]).value || null;
 
     return fetch('/tanda-tangan/simpan', {
         method: 'POST',
@@ -99,11 +144,12 @@ function simpanKeDatabase(namaPengguna, base64Ttd) {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'X-CSRF-TOKEN': token ? token.getAttribute('content') : ''
+            'X-CSRF-TOKEN': csrfToken()
         },
         body: JSON.stringify({
-            nama_pengguna: namaPengguna,
-            ttd: base64Ttd
+            nama_pengguna: NAMA_TTD[id],
+            ttd: gambar,
+            waktu: waktu
         })
     })
     .then(function (response) {
@@ -111,46 +157,21 @@ function simpanKeDatabase(namaPengguna, base64Ttd) {
             if (!response.ok) {
                 throw new Error('HTTP ' + response.status + ' - ' + (data.message || JSON.stringify(data.errors || data)));
             }
-            return data;
+            if (!ttdTersimpan || Array.isArray(ttdTersimpan)) ttdTersimpan = {};
+            ttdTersimpan[id] = { gambar: gambar, waktu: waktu };
+            return true;
         });
     })
-    .then(function (data) {
-        console.log('Berhasil masuk database:', data.message);
-        return true;
-    })
     .catch(function (error) {
-        console.error('Gagal simpan ke database:', error);
         alert('Tanda tangan gagal disimpan ke database: ' + error.message);
         return false;
     });
 }
 
-var NAMA_TTD = {
-    ttd1: 'Gibran D. Abdilah (Orang Pertama)',
-    ttd2: 'Gibran D. Abdilah (Orang Kedua)'
-};
-
-function muatTTDTersimpan() {
-    if (typeof ttdTersimpan === 'undefined' || !ttdTersimpan) return;
-
-    ['ttd1', 'ttd2'].forEach(function (id) {
-        var data = ttdTersimpan[id];
-        var canvas = document.getElementById(id);
-        if (!data || !canvas) return;
-
-        var img = new Image();
-        img.onload = function () {
-            canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
-        };
-        img.src = data;
-    });
-}
-
-function simpanDanCetak() {
-    var tombol = document.getElementById('btnSimpanCetak');
+function simpanTTD() {
+    var tombol = document.getElementById('btnSimpan');
     var daftar = ['ttd1', 'ttd2'].filter(function (id) {
-        var c = document.getElementById(id);
-        return c && !canvasKosong(c);
+        return !canvasKosong(document.getElementById(id));
     });
 
     if (!daftar.length) {
@@ -158,32 +179,24 @@ function simpanDanCetak() {
         return;
     }
 
-    if (tombol) tombol.disabled = true;
+    tombol.disabled = true;
 
-    Promise.all(daftar.map(function (id) {
-        return simpanKeDatabase(NAMA_TTD[id], document.getElementById(id).toDataURL('image/png'));
-    })).then(function (hasil) {
-        if (tombol) tombol.disabled = false;
-        if (hasil.every(function (ok) { return ok === true; })) {
-            unduhPDF(true);
+    Promise.all(daftar.map(simpanKeDatabase)).then(function (hasil) {
+        tombol.disabled = false;
+        if (hasil.every(function (ok) { return ok; })) {
+            alert('Berhasil disimpan!');
         }
     });
 }
 
-function unduhPDF(lewatiSimpan) {
+function buatPDF() {
     try {
         if (typeof window.jspdf === 'undefined') {
             alert('Library jsPDF belum dimuat!');
-            return;
+            return null;
         }
 
-        if (typeof semuaDataPenyakit === 'undefined') {
-            alert('Variabel semuaDataPenyakit tidak ditemukan!');
-            return;
-        }
-
-        var jsPDF = window.jspdf.jsPDF;
-        var pdf = new jsPDF();
+        var pdf = new window.jspdf.jsPDF();
 
         var foto = document.querySelector('img[alt="Foto Gibran"]');
         if (foto && foto.complete && foto.naturalWidth > 0) {
@@ -201,15 +214,10 @@ function unduhPDF(lewatiSimpan) {
 
         var dataArray = Array.isArray(semuaDataPenyakit)
             ? semuaDataPenyakit
-            : (semuaDataPenyakit && semuaDataPenyakit.data ? semuaDataPenyakit.data : Object.values(semuaDataPenyakit || {}));
+            : Object.values(semuaDataPenyakit || {});
 
         var bodyData = dataArray.map(function (row, index) {
-            return [
-                index + 1,
-                row.kode_icd ?? '',
-                row.diagnosis ?? '',
-                row.jumlah_kunjungan ?? ''
-            ];
+            return [index + 1, row.kode_icd ?? '', row.diagnosis ?? '', row.jumlah_kunjungan ?? ''];
         });
 
         pdf.autoTable({
@@ -229,19 +237,10 @@ function unduhPDF(lewatiSimpan) {
 
         var canvas1 = document.getElementById('ttd1');
         var canvas2 = document.getElementById('ttd2');
-        var gambar1 = canvas1 ? canvas1.toDataURL('image/png') : null;
-        var gambar2 = canvas2 ? canvas2.toDataURL('image/png') : null;
+        var gambar1 = canvasKosong(canvas1) ? null : canvas1.toDataURL('image/png');
+        var gambar2 = canvasKosong(canvas2) ? null : canvas2.toDataURL('image/png');
 
-        if (lewatiSimpan !== true) {
-            if (canvas1 && !canvasKosong(canvas1)) {
-                simpanKeDatabase(NAMA_TTD.ttd1, gambar1);
-            }
-            if (canvas2 && !canvasKosong(canvas2)) {
-                simpanKeDatabase(NAMA_TTD.ttd2, gambar2);
-            }
-        }
-
-        var y = (pdf.lastAutoTable ? pdf.lastAutoTable.finalY : 60) + 15;
+        var y = pdf.lastAutoTable.finalY + 15;
         if (y + 75 > 280) {
             pdf.addPage();
             y = 20;
@@ -257,26 +256,53 @@ function unduhPDF(lewatiSimpan) {
         pdf.text('Tanggal : ' + tanggal, 20, y + 17);
         pdf.text('Paraf :', 20, y + 24);
         pdf.rect(20, y + 27, 80, 34);
-        if (gambar1) {
-            pdf.addImage(gambar1, 'PNG', 20, y + 27, 80, 34);
-        }
+        if (gambar1) pdf.addImage(gambar1, 'PNG', 20, y + 27, 80, 34);
 
         pdf.text('Orang Kedua', 110, y + 10);
         pdf.text('Jam : ' + jam, 110, y + 17);
         pdf.text('Paraf :', 110, y + 24);
         pdf.rect(110, y + 27, 80, 34);
-        if (gambar2) {
-            pdf.addImage(gambar2, 'PNG', 110, y + 27, 80, 34);
-        }
+        if (gambar2) pdf.addImage(gambar2, 'PNG', 110, y + 27, 80, 34);
 
-        pdf.save('menu-gibran.pdf');
+        return pdf;
     } catch (error) {
         alert('Terjadi kesalahan: ' + error.message);
+        return null;
     }
 }
 
+function unduhPDF() {
+    var pdf = buatPDF();
+    if (pdf) pdf.save('menu-gibran.pdf');
+}
+
+function cetakPDF() {
+    var pdf = buatPDF();
+    if (!pdf) return;
+
+    var url = URL.createObjectURL(pdf.output('blob'));
+    var iframe = document.createElement('iframe');
+    iframe.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';
+    iframe.src = url;
+
+    iframe.onload = function () {
+        try {
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+        } catch (e) {
+            window.open(url, '_blank');
+        }
+
+        setTimeout(function () {
+            URL.revokeObjectURL(url);
+            iframe.remove();
+        }, 60000);
+    };
+
+    document.body.appendChild(iframe);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    isiTanggalJam();
     aktifkanTTD('ttd1');
     aktifkanTTD('ttd2');
     muatTTDTersimpan();
