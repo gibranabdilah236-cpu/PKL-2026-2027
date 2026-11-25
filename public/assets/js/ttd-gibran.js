@@ -83,7 +83,94 @@ function isiTanggalJam() {
     if (elJam) elJam.value = jam + ':' + menit;
 }
 
-function unduhPDF() {
+function canvasKosong(canvas) {
+    var kosong = document.createElement('canvas');
+    kosong.width = canvas.width;
+    kosong.height = canvas.height;
+    return canvas.toDataURL() === kosong.toDataURL();
+}
+
+function simpanKeDatabase(namaPengguna, base64Ttd) {
+    var token = document.querySelector('meta[name="csrf-token"]');
+
+    return fetch('/tanda-tangan/simpan', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-CSRF-TOKEN': token ? token.getAttribute('content') : ''
+        },
+        body: JSON.stringify({
+            nama_pengguna: namaPengguna,
+            ttd: base64Ttd
+        })
+    })
+    .then(function (response) {
+        return response.json().then(function (data) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status + ' - ' + (data.message || JSON.stringify(data.errors || data)));
+            }
+            return data;
+        });
+    })
+    .then(function (data) {
+        console.log('Berhasil masuk database:', data.message);
+        return true;
+    })
+    .catch(function (error) {
+        console.error('Gagal simpan ke database:', error);
+        alert('Tanda tangan gagal disimpan ke database: ' + error.message);
+        return false;
+    });
+}
+
+var NAMA_TTD = {
+    ttd1: 'Gibran D. Abdilah (Orang Pertama)',
+    ttd2: 'Gibran D. Abdilah (Orang Kedua)'
+};
+
+function muatTTDTersimpan() {
+    if (typeof ttdTersimpan === 'undefined' || !ttdTersimpan) return;
+
+    ['ttd1', 'ttd2'].forEach(function (id) {
+        var data = ttdTersimpan[id];
+        var canvas = document.getElementById(id);
+        if (!data || !canvas) return;
+
+        var img = new Image();
+        img.onload = function () {
+            canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+        img.src = data;
+    });
+}
+
+function simpanDanCetak() {
+    var tombol = document.getElementById('btnSimpanCetak');
+    var daftar = ['ttd1', 'ttd2'].filter(function (id) {
+        var c = document.getElementById(id);
+        return c && !canvasKosong(c);
+    });
+
+    if (!daftar.length) {
+        alert('Paraf masih kosong');
+        return;
+    }
+
+    if (tombol) tombol.disabled = true;
+
+    Promise.all(daftar.map(function (id) {
+        return simpanKeDatabase(NAMA_TTD[id], document.getElementById(id).toDataURL('image/png'));
+    })).then(function (hasil) {
+        if (tombol) tombol.disabled = false;
+        if (hasil.every(function (ok) { return ok === true; })) {
+            unduhPDF(true);
+        }
+    });
+}
+
+function unduhPDF(lewatiSimpan) {
     try {
         if (typeof window.jspdf === 'undefined') {
             alert('Library jsPDF belum dimuat!');
@@ -145,6 +232,15 @@ function unduhPDF() {
         var gambar1 = canvas1 ? canvas1.toDataURL('image/png') : null;
         var gambar2 = canvas2 ? canvas2.toDataURL('image/png') : null;
 
+        if (lewatiSimpan !== true) {
+            if (canvas1 && !canvasKosong(canvas1)) {
+                simpanKeDatabase(NAMA_TTD.ttd1, gambar1);
+            }
+            if (canvas2 && !canvasKosong(canvas2)) {
+                simpanKeDatabase(NAMA_TTD.ttd2, gambar2);
+            }
+        }
+
         var y = (pdf.lastAutoTable ? pdf.lastAutoTable.finalY : 60) + 15;
         if (y + 75 > 280) {
             pdf.addPage();
@@ -183,4 +279,5 @@ document.addEventListener('DOMContentLoaded', function () {
     isiTanggalJam();
     aktifkanTTD('ttd1');
     aktifkanTTD('ttd2');
+    muatTTDTersimpan();
 });

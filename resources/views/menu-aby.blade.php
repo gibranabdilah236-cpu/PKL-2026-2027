@@ -210,7 +210,7 @@
             if (pads[jenis].isEmpty()) return alert('Paraf masih kosong');
 
             try {
-                const res = await fetch("{{ route('ttd.store') }}", {
+                const res = await fetch("{{ route('aby.ttd.store') }}", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
