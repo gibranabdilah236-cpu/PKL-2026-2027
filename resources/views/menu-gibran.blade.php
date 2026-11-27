@@ -126,7 +126,6 @@
                     </div>
 
                     <button type="button" class="btn btn-success mt-3" id="btnSimpan" onclick="simpanTTD()">Simpan</button>
-                    <button type="button" class="btn btn-info mt-3" onclick="cetakPDF()">Cetak</button>
                     <button type="button" class="btn btn-primary mt-3" onclick="unduhPDF()">Unduh PDF</button>
                 </div>
             </div>
@@ -141,11 +140,13 @@
 
 @push('after-script')
 <script src="{{ asset('assets/vendors/datatable/datatables.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script>
-    var semuaDataPenyakit = @json($semuaDataPenyakitPdf ?? []);
     var ttdTersimpan = @json($ttdTersimpan ?? []);
+    var URL_TTD = {
+        simpan: "{{ route('ttd.gibran.store') }}",
+        hapus: "{{ url('/tanda-tangan-gibran') }}",
+        pdf: "{{ route('menu.gibran.pdf') }}"
+    };
 </script>
 <script src="{{ asset('assets/js/ttd-gibran.js') }}"></script>
 <script>

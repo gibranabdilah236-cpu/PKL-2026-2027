@@ -93,7 +93,7 @@ function hapusTTD(id) {
 
     if (!confirm('Paraf ini sudah tersimpan di database. Hapus juga dari database?')) return;
 
-    fetch('/tanda-tangan-gibran/' + id, {
+    fetch(URL_TTD.hapus + '/' + id, {
         method: 'DELETE',
         credentials: 'same-origin',
         headers: {
@@ -138,7 +138,7 @@ function simpanKeDatabase(id) {
     var gambar = document.getElementById(id).toDataURL('image/png');
     var waktu = document.getElementById(ID_WAKTU[id]).value || null;
 
-    return fetch('/tanda-tangan/simpan', {
+    return fetch(URL_TTD.simpan, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
@@ -189,117 +189,25 @@ function simpanTTD() {
     });
 }
 
-function buatPDF() {
-    try {
-        if (typeof window.jspdf === 'undefined') {
-            alert('Library jsPDF belum dimuat!');
-            return null;
-        }
+function siapkanPDF(lanjut) {
+    var daftar = ['ttd1', 'ttd2'].filter(function (id) {
+        return !canvasKosong(document.getElementById(id));
+    });
 
-        var pdf = new window.jspdf.jsPDF();
-
-        var foto = document.querySelector('img[alt="Foto Gibran"]');
-        if (foto && foto.complete && foto.naturalWidth > 0) {
-            pdf.addImage(foto, 'JPEG', 20, 15, 30, 37);
-        }
-
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(14);
-        pdf.text('Gibran D. Abdilah', 58, 25);
-        pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(11);
-        pdf.text('NIS: 3271300097', 58, 32);
-        pdf.text('Praktik Kerja Lapangan (PKL)', 58, 39);
-        pdf.text('RSUD Kota Bogor', 58, 46);
-
-        var dataArray = Array.isArray(semuaDataPenyakit)
-            ? semuaDataPenyakit
-            : Object.values(semuaDataPenyakit || {});
-
-        var bodyData = dataArray.map(function (row, index) {
-            return [index + 1, row.kode_icd ?? '', row.diagnosis ?? '', row.jumlah_kunjungan ?? ''];
-        });
-
-        pdf.autoTable({
-            head: [['No', 'Kode ICD', 'Diagnosis Penyakit', 'Jumlah Kunjungan']],
-            body: bodyData,
-            startY: 60,
-            theme: 'grid',
-            styles: { fontSize: 9, lineColor: [0, 0, 0], lineWidth: 0.2, textColor: [0, 0, 0] },
-            headStyles: { fillColor: [52, 73, 94], textColor: [255, 255, 255] }
-        });
-
-        var tanggal = document.getElementById('tanggal1').value;
-        var jam = document.getElementById('jam2').value;
-
-        tanggal = tanggal ? tanggal.split('-').reverse().join('-') : '-';
-        jam = jam || '-';
-
-        var canvas1 = document.getElementById('ttd1');
-        var canvas2 = document.getElementById('ttd2');
-        var gambar1 = canvasKosong(canvas1) ? null : canvas1.toDataURL('image/png');
-        var gambar2 = canvasKosong(canvas2) ? null : canvas2.toDataURL('image/png');
-
-        var y = pdf.lastAutoTable.finalY + 15;
-        if (y + 75 > 280) {
-            pdf.addPage();
-            y = 20;
-        }
-
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(13);
-        pdf.text('Verifikasi & Serah Terima', 20, y);
-        pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(11);
-
-        pdf.text('Orang Pertama', 20, y + 10);
-        pdf.text('Tanggal : ' + tanggal, 20, y + 17);
-        pdf.text('Paraf :', 20, y + 24);
-        pdf.rect(20, y + 27, 80, 34);
-        if (gambar1) pdf.addImage(gambar1, 'PNG', 20, y + 27, 80, 34);
-
-        pdf.text('Orang Kedua', 110, y + 10);
-        pdf.text('Jam : ' + jam, 110, y + 17);
-        pdf.text('Paraf :', 110, y + 24);
-        pdf.rect(110, y + 27, 80, 34);
-        if (gambar2) pdf.addImage(gambar2, 'PNG', 110, y + 27, 80, 34);
-
-        return pdf;
-    } catch (error) {
-        alert('Terjadi kesalahan: ' + error.message);
-        return null;
+    if (!daftar.length) {
+        lanjut();
+        return;
     }
+
+    Promise.all(daftar.map(simpanKeDatabase)).then(function (hasil) {
+        if (hasil.every(function (ok) { return ok; })) lanjut();
+    });
 }
 
 function unduhPDF() {
-    var pdf = buatPDF();
-    if (pdf) pdf.save('menu-gibran.pdf');
-}
-
-function cetakPDF() {
-    var pdf = buatPDF();
-    if (!pdf) return;
-
-    var url = URL.createObjectURL(pdf.output('blob'));
-    var iframe = document.createElement('iframe');
-    iframe.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';
-    iframe.src = url;
-
-    iframe.onload = function () {
-        try {
-            iframe.contentWindow.focus();
-            iframe.contentWindow.print();
-        } catch (e) {
-            window.open(url, '_blank');
-        }
-
-        setTimeout(function () {
-            URL.revokeObjectURL(url);
-            iframe.remove();
-        }, 60000);
-    };
-
-    document.body.appendChild(iframe);
+    siapkanPDF(function () {
+        window.location.href = URL_TTD.pdf + '?unduh=1';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
