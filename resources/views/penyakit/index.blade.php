@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Data Penyakit</title>
@@ -50,4 +50,4 @@
     @endif
 
 </body>
-</html> -->
+</html>

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Penyakit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PenyakitController extends Controller
 {
@@ -11,7 +11,7 @@ class PenyakitController extends Controller
     {
         $search = $request->input('search');
 
-        $penyakit = Penyakit::query();
+        $penyakit = DB::table('kasus_penyakits');
 
         if ($search) {
             $penyakit->where(function ($query) use ($search) {
@@ -20,7 +20,9 @@ class PenyakitController extends Controller
             });
         }
 
-        $penyakit = $penyakit->paginate(10)->withQueryString();
+        $penyakit = $penyakit->orderBy('kode_icd')
+            ->paginate(10)
+            ->withQueryString();
 
         return view('aliz', compact('penyakit', 'search'));
     }
